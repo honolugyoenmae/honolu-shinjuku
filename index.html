@@ -157,7 +157,7 @@
             text-align: right;
             color: var(--text-light);
         }
-        /* ギャラリー用のスタイル */
+        /* ギャラリー用のスタイル修正 */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -169,11 +169,15 @@
             border-radius: 8px;
             overflow: hidden;
             border: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            flex-direction: column;
         }
         .gallery-card img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: auto; /* 高さを自動にして写真全体を表示 */
+            max-height: 350px; /* 縦長になりすぎないように制限 */
+            object-fit: contain; /* 写真を切らずに全体を枠に収める */
+            background-color: #0b0e14; /* 写真の隙間を黒背景で馴染ませる */
         }
         .gallery-caption {
             padding: 12px;
@@ -181,7 +185,8 @@
             font-size: 14px;
             font-weight: bold;
             color: var(--accent-gold);
-            background: rgba(0,0,0,0.2);
+            background: rgba(0,0,0,0.4);
+            margin-top: auto;
         }
     </style>
 </head>
