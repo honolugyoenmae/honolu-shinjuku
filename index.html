@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honolu Shinjukugyoenmae Halal Ramen | Official Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body { background-color: #0d0f12; color: #e5e7eb; font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; }
+        .slide-container { background-color: #11141a; box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7); display: flex; flex-direction: column; min-height: 100vh; position: relative; width: 100%; max-width: 1200px; margin: 0 auto; border: 1px solid #222733; }
+        h1, h2, h3 { font-family: 'Noto Serif JP', serif; color: #D4AF37; margin: 0; }
+        p { font-size: 16px; line-height: 1.6; color: #9ca3af; }
+        .site-header { align-items: center; background: rgba(17, 20, 26, 0.95); border-bottom: 1px solid #222733; display: flex; height: 70px; justify-content: space-between; padding: 0 40px; position: sticky; top: 0; width: 100%; z-index: 10; }
+        .brand-logo { font-size: 22px; font-weight: 700; color: #fff; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 25px; list-style: none; margin: 0; padding: 0; }
+        .nav-links a { color: #9ca3af; text-decoration: none; font-size: 14px; font-weight: 600; text-transform: uppercase; transition: color 0.3s; }
+        .nav-links a:hover { color: #D4AF37; }
+        .hero-section { align-items: center; background-image: linear-gradient(rgba(13, 15, 18, 0.6), rgba(13, 15, 18, 0.85)), url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=1200&auto=format&fit=crop'); background-size: cover; background-position: center; display: flex; min-height: calc(100vh - 70px); justify-content: center; text-align: center; padding: 40px 20px; }
+        .hero-content h1 { font-size: 55px; color: #fff; margin-bottom: 10px; }
+        .hero-content .tagline { font-size: 20px; color: #D4AF37; margin-bottom: 30px; letter-spacing: 4px; font-weight: bold; }
+        .cta-button { background: #D4AF37; color: #0d0f12; padding: 15px 35px; font-weight: 700; text-decoration: none; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; transition: background 0.3s; display: inline-block; }
+        .cta-button:hover { background: #fff; }
+        .slide-content-wrap { padding: 60px 40px; }
+        .section-title { font-size: 32px; font-weight: 700; margin-bottom: 40px; border-left: 5px solid #D4AF37; padding-left: 15px; text-transform: uppercase; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 30px; }
+        .menu-card { background: #171b24; border: 1px solid #222733; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; }
+        .menu-card img { width: 100%; height: 220px; object-fit: cover; }
+        .menu-info { padding: 20px; text-align: left; }
+        .menu-info h3 { font-size: 20px; color: #fff; margin-bottom: 10px; }
+        .menu-info .price { color: #ff4d4d; font-size: 20px; font-weight: 700; margin-top: 10px; }
+        .two-column-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: start; }
+        .info-box { background: #171b24; border: 1px solid #222733; padding: 30px; border-radius: 6px; }
+        .info-item { display: flex; gap: 15px; margin-bottom: 25px; }
+        .info-item i { font-size: 20px; color: #D4AF37; margin-top: 3px; width: 25px; text-align: center; }
+        .info-item h4 { margin: 0 0 5px 0; font-size: 18px; color: #fff; }
+        .info-item p { margin: 0; font-size: 15px; }
+        .hours-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 15px; }
+        .hours-table td { padding: 8px 0; border-bottom: 1px solid #222733; }
+        .hours-table td:last-child { text-align: right; color: #fff; }
+        .social-btn { display: inline-flex; align-items: center; gap: 10px; background: #e1306c; color: #fff; padding: 12px 25px; border-radius: 4px; text-decoration: none; font-weight: 600; margin-top: 15px; transition: opacity 0.3s; }
+        .social-btn:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+<div class="slide-container" id="home">
+    <header class="site-header">
+        <div class="brand-logo">Honolu Shinjukugyoenmae</div>
+        <ul class="nav-links">
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">Access & Hours</a></li>
+        </ul>
+    </header>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>麺屋 帆のる</h1>
+            <div class="tagline">100% HALAL CHICKEN PAITAN RAMEN</div>
+            <p style="color: #fff; font-size: 18px; max-width: 700px; margin: 0 auto 30px auto;">
+                Welcome to Shinjuku's premier Muslim-friendly ramen spot. Experience our rich, creamy chicken broth and premium toppings tailored for everyone.
+            </p>
+            <div style="margin-bottom: 25px;">
+                <span style="color: #D4AF37; font-weight: 600; margin: 0 15px;"><i class="fa-solid fa-star"></i> 4.7 Google (1,300+ Reviews)</span>
+                <span style="color: #D4AF37; font-weight: 600; margin: 0 15px;"><i class="fa-solid fa-mosque"></i> Prayer Room Available</span>
+            </div>
+            <a href="#menu" class="cta-button">Explore Menu</a>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="menu">
+    <div class="slide-content-wrap">
+        <h2 class="section-title">Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=400&auto=format&fit=crop" alt="Special Rich Chicken Ramen">
+                <div class="menu-info">
+                    <h3>Special Rich Chicken Ramen</h3>
+                    <div class="price">¥1,800</div>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1557872943-16a5ac26437e?q=80&w=400&auto=format&fit=crop" alt="Spicy Fried Chicken Ramen">
+                <div class="menu-info">
+                    <h3>Spicy Fried Chicken Ramen 🌶️🌶️</h3>
+                    <div class="price">¥2,200</div>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=400&auto=format&fit=crop" alt="A5 Wagyu Soy-Sauce Ramen 100g">
+                <div class="menu-info">
+                    <h3>A5 Wagyu Soy-Sauce Ramen 100g</h3>
+                    <div class="price">¥4,500</div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1626804475315-9653bf9377ca?q=80&w=400&auto=format&fit=crop" alt="Beef Yakiniku Curry Rice">
+                <div class="menu-info">
+                    <h3>Beef Yakiniku Curry Rice</h3>
+                    <div class="price">¥1,600</div>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?q=80&w=400&auto=format&fit=crop" alt="Chicken Gyoza Grilled 5pieces">
+                <div class="menu-info">
+                    <h3>Chicken Gyoza Grilled (5pcs)</h3>
+                    <div class="price">¥800</div>
+                </div>
+            </div>
+            <div class="menu-card" style="background: rgba(34,39,51,0.3); display: flex; align-items: center; justify-content: center; padding: 20px; border-style: dashed;">
+                <p style="text-align: center; margin: 0; font-size: 15px;">Many more dishes and custom toppings available in store!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="about">
+    <div class="slide-content-wrap">
+        <h2 class="section-title">Shop Information</h2>
+        <div class="two-column-grid">
+            <div class="info-box">
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>Dia Palace B1, 1-31-3 Shinjuku, Shinjuku City, Tokyo 160-0022</p>
+                        <p style="color: #D4AF37; margin-top: 5px; font-size: 14px;">*Short walk from Shinjuku-gyoenmae Station</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-mosque"></i>
+                    <div>
+                        <h4>Muslim Friendly Facility</h4>
+                        <p>We are proud to provide an on-site prayer space for our Muslim guests.</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-brands fa-instagram"></i>
+                    <div>
+                        <h4>Follow Our Updates</h4>
+                        <a href="https://www.instagram.com/honolu_shinjukugyoen" target="_blank" class="social-btn">
+                            <i class="fa-brands fa-instagram"></i> @honolu_shinjukugyoen
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="info-item" style="margin-bottom: 10px;">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <h4>Opening Hours</h4>
+                    </div>
+                </div>
+                <table class="hours-table">
+                    <tr><td>Monday - Sunday</td><td>11:30–14:30 / 17:00–20:30</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
