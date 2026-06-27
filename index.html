@@ -3,309 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menya Honolu Shinjuku Gyoenmae</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Menya Honolu Shinjuku Gyoenmae - Authentic Halal Ramen</title>
     <style>
-        :root {
-            --bg-dark: #121620;
-            --card-bg: #1c2130;
-            --accent-gold: #D4AF37;
-            --text-light: #ffffff;
-            --text-muted: #a0a5b5;
-        }
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-        .hero {
-            position: relative;
-            height: 80vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('IMG_4164.jpeg') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-        }
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .hero-content p {
-            font-size: 1.2rem;
-            color: var(--accent-gold);
-            margin-bottom: 30px;
-        }
-        .cta-btn {
-            background-color: var(--accent-gold);
-            color: #000;
-            padding: 12px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        .cta-btn:hover {
-            background-color: #fff;
-        }
-        .slide-container {
-            padding: 60px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: var(--accent-gold);
-            margin-bottom: 40px;
-            position: relative;
-            text-transform: uppercase;
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 2px;
-            background: var(--accent-gold);
-            margin: 10px auto 0;
-        }
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .menu-card {
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            border: 1px solid rgba(212,175,55,0.1);
-        }
-        .menu-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-        .menu-info {
-            padding: 20px;
-        }
-        .menu-info h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.3rem;
-        }
-        .menu-info .price {
-            color: var(--accent-gold);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        .two-column-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        .info-box {
-            background-color: var(--card-bg);
-            padding: 30px;
-            border-radius: 10px;
-        }
-        .info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-        .info-item i {
-            color: var(--accent-gold);
-            font-size: 1.5rem;
-            margin-top: 3px;
-        }
-        .info-item h4 {
-            margin: 0 0 5px 0;
-            color: var(--text-light);
-        }
-        .info-item p {
-            margin: 0;
-            color: var(--text-muted);
-        }
-        .social-btn {
-            display: inline-block;
-            margin-top: 10px;
-            background: #e1306c;
-            color: #fff;
-            padding: 8px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        .hours-table {
-            width: 100%;
-            border-collapse: collapse;
-            color: var(--text-muted);
-        }
-        .hours-table td {
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        .hours-table td:last-child {
-            text-align: right;
-            color: var(--text-light);
-        }
-        /* ギャラリー用のスタイル修正 */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        .gallery-card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.05);
-            display: flex;
-            flex-direction: column;
-        }
-        .gallery-card img {
-            width: 100%;
-            height: auto; /* 高さを自動にして写真全体を表示 */
-            max-height: 350px; /* 縦長になりすぎないように制限 */
-            object-fit: contain; /* 写真を切らずに全体を枠に収める */
-            background-color: #0b0e14; /* 写真の隙間を黒背景で馴染ませる */
-        }
-        .gallery-caption {
-            padding: 12px;
-            text-align: center;
-            font-size: 14px;
-            font-weight: bold;
-            color: var(--accent-gold);
-            background: rgba(0,0,0,0.4);
-            margin-top: auto;
-        }
+        /* シンプルでモダンなデザインの調整（CSS） */
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f9f9f9; }
+        header { background-color: #1a1a1a; color: #fff; padding: 20px; text-align: center; }
+        .hero { background-color: #aa1414; color: white; text-align: center; padding: 60px 20px; }
+        .hero h1 { margin: 0; font-size: 2.5rem; }
+        .badge-container { margin-top: 15px; }
+        .badge { background: #fff; color: #aa1414; padding: 5px 15px; margin: 5px; font-weight: bold; border-radius: 20px; display: inline-block; }
+        .container { max-width: 800px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h2 { border-left: 5px solid #aa1414; padding-left: 10px; color: #1a1a1a; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .menu-item { border: 1px solid #ddd; padding: 15px; border-radius: 8px; background: #fff; }
+        .price { color: #aa1414; font-weight: bold; font-size: 1.2rem; }
+        .footer { background: #1a1a1a; color: white; text-align: center; padding: 20px; margin-top: 4px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-<div class="hero">
-    <div class="hero-content">
-        <h1>Menya Honolu</h1>
-        <p>Shinjuku Gyoenmae — Halal Ramen Shop</p>
-        <a href="#menu" class="cta-btn">View Menu</a>
-    </div>
-</div>
+    <header>
+        <h1>麺屋 帆のる / Menya Honolu</h1>
+        <p>Shinjuku Gyoenmae</p>
+    </header>
 
-<div class="slide-container" id="menu">
-    <div class="slide-content-wrap">
-        <h2 class="section-title">Our Menu</h2>
+    <div class="hero">
+        <h1>Authentic Halal Ramen in Tokyo</h1>
+        <p>Experience Japan's favorite comfort food with 100% peace of mind.</p>
+        <div class="badge-container">
+            <span class="badge">100% HALAL CERTIFIED</span>
+            <span class="badge">PRAYER ROOM AVAILABLE</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Our Halal Policy & Prayer Room</h2>
+        <p>Our soup, noodles, and toppings contain <strong>NO pork, NO lard, and NO alcohol</strong>. We are strictly 100% Halal certified. We also provide a dedicated <strong>Prayer Space (Prayer Room)</strong> inside the restaurant for our Muslim guests.</p>
+    </div>
+
+    <div class="container">
+        <h2>Ramen Menu</h2>
         <div class="menu-grid">
-            <div class="menu-card">
-                <img src="IMG_4164.jpeg" alt="Special Rich Chicken Ramen">
-                <div class="menu-info">
-                    <h3>Special Rich Chicken Ramen</h3>
-                    <div class="price">¥1,800</div>
-                </div>
+            <!-- スパイス系 -->
+            <div class="menu-item">
+                <h3>Spicy Fried Chicken Ramen</h3>
+                <p>スパイシー唐揚げらーめん 🌶️🌶️</p>
+                <p class="price">¥2,200</p>
             </div>
-            <div class="menu-card">
-                <img src="IMG_3267.jpeg" alt="Spicy Fried Chicken Ramen">
-                <div class="menu-info">
-                    <h3>Spicy Fried Chicken Ramen</h3>
-                    <div class="price">¥2,200</div>
-                </div>
+            <div class="menu-item">
+                <h3>Spicy Beef Yakiniku Ramen</h3>
+                <p>スパイシー牛焼肉らーめん 🌶️🌶️</p>
+                <p class="price">¥2,300</p>
             </div>
-            <div class="menu-card">
-                <img src="IMG_3388.jpeg" alt="A5 Wagyu Soy-Sauce Ramen 100g">
-                <div class="menu-info">
-                    <h3>A5 Wagyu Soy-Sauce Ramen 100g</h3>
-                    <div class="price">¥4,500</div>
-                </div>
+            <div class="menu-item">
+                <h3>Spicy Ramen</h3>
+                <p>スパイシーらーめん 🌶️🌶️</p>
+                <p class="price">¥1,800</p>
             </div>
-            <div class="menu-card">
-                <img src="IMG_4167.jpeg" alt="Beef Yakiniku Curry Rice">
-                <div class="menu-info">
-                    <h3>Beef Yakiniku Curry Rice</h3>
-                    <div class="price">¥1,600</div>
-                </div>
+            <div class="menu-item">
+                <h3>Extreme Spicy Ramen</h3>
+                <p>激辛らーめん 🌶️🌶️🌶️🌶️</p>
+                <p class="price">¥2,000</p>
             </div>
-            <div class="menu-card">
-                <img src="IMG_4166.jpeg" alt="Chicken Gyoza Grilled 5pieces">
-                <div class="menu-info">
-                    <h3>Chicken Gyoza Grilled (5pcs)</h3>
-                    <div class="price">¥800</div>
-                </div>
+            <!-- 定番・プレミアム -->
+            <div class="menu-item">
+                <h3>Special Rich Chicken Ramen</h3>
+                <p>特製鶏白湯らーめん</p>
+                <p class="price">¥1,800</p>
             </div>
-            <div class="menu-card" style="background: rgba(34,39,51,0.3); display: flex; align-items: center; justify-content: center; padding: 20px; border-style: dashed;">
-                <p style="text-align: center; margin: 0; font-size: 15px;">Many more dishes and custom toppings available in store!</p>
+            <div class="menu-item">
+                <h3>Rich Chicken Ramen</h3>
+                <p>鶏白湯らーめん</p>
+                <p class="price">¥1,300</p>
             </div>
-        </div>
-    </div>
-</div>
-
-<div class="slide-container" id="about">
-    <div class="slide-content-wrap">
-        <h2 class="section-title">Shop Information</h2>
-        <div class="two-column-grid">
-            <div class="info-box">
-                <div class="info-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                        <h4>Address</h4>
-                        <p>Dia Palace B1, 1-31-3 Shinjuku, Shinjuku City, Tokyo 160-0022</p>
-                        <p style="color: #D4AF37; margin-top: 5px; font-size: 14px;">*Short walk from Shinjuku-gyoenmae Station</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-mosque"></i>
-                    <div>
-                        <h4>Muslim Friendly Facility</h4>
-                        <p>We are proud to provide an on-site prayer space for our Muslim guests.</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fa-brands fa-instagram"></i>
-                    <div>
-                        <h4>Follow Our Updates</h4>
-                        <a href="https://www.instagram.com/honolu_shinjukugyoen" target="_blank" class="social-btn">
-                            <i class="fa-brands fa-instagram"></i> @honolu_shinjukugyoen
-                        </a>
-                    </div>
-                </div>
+            <div class="menu-item">
+                <h3>Fried Chicken Ramen</h3>
+                <p>から揚げらーめん</p>
+                <p class="price">¥1,800</p>
             </div>
-            <div class="info-box">
-                <div class="info-item" style="margin-bottom: 10px;">
-                    <i class="fa-solid fa-clock"></i>
-                    <div>
-                        <h4>Opening Hours</h4>
-                    </div>
-                </div>
-                <table class="hours-table">
-                    <tr><td>Monday - Sunday</td><td>11:30–14:30 / 17:00–20:30</td></tr>
-                </table>
+            <div class="menu-item">
+                <h3>Beef Yakiniku Ramen</h3>
+                <p>牛焼肉らーめん</p>
+                <p class="price">¥1,850</p>
             </div>
-        </div>
-
-        <h3 style="color: var(--accent-gold); margin-top: 40px; margin-bottom: 20px; text-align: center; font-family: sans-serif;">Our Shop & Prayer Space</h3>
-        <div class="gallery-grid">
-            <div class="gallery-card">
-                <img src="IMG_4170.jpeg" alt="Exterior">
-                <div class="gallery-caption">Entrance / 外観</div>
+            <div class="menu-item">
+                <h3>A5 Wagyu Soy-Sauce Ramen 100g</h3>
+                <p>A5 和牛らーめん 100g</p>
+                <p class="price">¥4,500</p>
             </div>
-            <div class="gallery-card">
-                <img src="IMG_4171.jpeg" alt="Interior">
-                <div class="gallery-caption">Dining Area / 内観</div>
+            <div class="menu-item">
+                <h3>A5 Wagyu Soy-Sauce Ramen 150g</h3>
+                <p>A5 和牛らーめん 150g</p>
+                <p class="price">¥5,500</p>
             </div>
-            <div class="gallery-card">
-                <img src="IMG_4169.jpeg" alt="Prayer Room">
-                <div class="gallery-caption">Prayer Room / 礼拝スペース</div>
+            <!-- キッズ -->
+            <div class="menu-item">
+                <h3>Kids Ramen</h3>
+                <p>キッズらーめん</p>
+                <p class="price">¥1,000</p>
             </div>
         </div>
     </div>
-</div>
+
+    <div class="container">
+        <h2>Shop Information & Access</h2>
+        <p><strong>Address:</strong> B1F, DIApalaceShinjuku 1choume, 1-31-3 Shinjuku, Shinjuku-ku, Tokyo, 160-0022</p>
+        <p><strong>Opening Hours:</strong><br>
+        Lunch: 11:30 - 15:00 (L.O. 14:30)<br>
+        Dinner: 17:00 - 21:00 (L.O. 20:30)<br>
+        *Open daily (Except New Year holidays)</p>
+        <p><strong>Seats:</strong> 19 seats (Counter: 3, Table: 16)</p>
+        <p><strong>Phone:</strong> 03-5357-7664</p>
+        
+        <h3>How to get here (1-minute walk)</h3>
+        <p>Take <strong>Exit 2</strong> from <strong>Shinjuku-gyoenmae Station</strong> (Tokyo Metro Marunouchi Line). Turn left immediately after exiting, then turn left at the very first intersection. Walk straight for a short distance; we are located in the basement (B1F) of the building right next to "Komoro Soba".</p>
+    </div>
+
+    <div class="footer">
+        <p>We accept Credit Cards, Transit IC, PayPay, Alipay, WeChat Pay, and more.</p>
+        <p>&copy; Menya Honolu Shinjuku Gyoenmae. All Rights Reserved.</p>
+    </div>
 
 </body>
 </html>
