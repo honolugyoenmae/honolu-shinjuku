@@ -3,28 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Menya Honolu Shinjuku Gyoenmae - Authentic Halal Ramen in Tokyo</title>
     <meta name="description" content="麺屋帆のる 新宿御苑前店は、東京・新宿御苑前駅徒歩1分の100%ハラール認証ラーメン店です。礼拝室完備。Halal ramen in Tokyo with prayer room.">
-
-    <meta property="og:title" content="Menya Honolu Shinjuku Gyoenmae - Authentic Halal Ramen">
-    <meta property="og:description" content="100% Halal certified ramen restaurant in Tokyo. Prayer room available. 1-minute walk from Shinjuku-gyoenmae Station.">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
 
     <style>
         :root {
             --primary: #aa1414;
-            --primary-dark: #7f0f0f;
+            --primary-dark: #7c0e0e;
+            --gold: #d9a441;
             --dark: #151515;
             --text: #2f2f2f;
             --muted: #666;
             --bg: #f6f1ec;
-            --card: #ffffff;
-            --border: #ece2d8;
-            --gold: #d9a441;
-            --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-            --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.06);
+            --card: #fff;
+            --border: #eadfd5;
+            --shadow: 0 10px 28px rgba(0,0,0,0.08);
+            --shadow-soft: 0 5px 16px rgba(0,0,0,0.06);
             --radius: 18px;
         }
 
@@ -37,13 +31,13 @@
         }
 
         body {
+            margin: 0;
+            padding: 0 0 70px;
             font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "Noto Sans JP", sans-serif;
             line-height: 1.7;
             color: var(--text);
-            margin: 0;
-            padding: 0;
             background:
-                radial-gradient(circle at top left, rgba(170, 20, 20, 0.08), transparent 30%),
+                radial-gradient(circle at top left, rgba(170,20,20,0.08), transparent 30%),
                 linear-gradient(180deg, #fffaf5 0%, var(--bg) 100%);
         }
 
@@ -52,26 +46,24 @@
         }
 
         header {
-            background:
-                linear-gradient(135deg, rgba(20, 20, 20, 0.98), rgba(50, 20, 20, 0.98)),
-                var(--dark);
-            color: #fff;
-            padding: 22px 20px 18px;
-            text-align: center;
             position: sticky;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22);
+            z-index: 1000;
+            background: linear-gradient(135deg, #151515, #321414);
+            color: #fff;
+            text-align: center;
+            padding: 18px 16px 14px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.24);
         }
 
         header h1 {
             margin: 0;
             font-size: clamp(1.25rem, 3vw, 1.75rem);
-            letter-spacing: 0.03em;
+            letter-spacing: 0.04em;
         }
 
         header p {
-            margin: 5px 0 0;
+            margin: 4px 0 0;
             opacity: 0.82;
             font-size: 0.95rem;
         }
@@ -81,40 +73,39 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 8px;
-            margin-top: 15px;
+            margin-top: 14px;
         }
 
         .lang-btn {
-            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255,255,255,0.25);
+            background: rgba(255,255,255,0.08);
             color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.22);
-            padding: 7px 16px;
-            cursor: pointer;
+            padding: 7px 15px;
             border-radius: 999px;
+            cursor: pointer;
             font-size: 0.9rem;
             transition: 0.2s ease;
         }
 
         .lang-btn:hover {
-            background: rgba(255, 255, 255, 0.16);
-            transform: translateY(-1px);
+            background: rgba(255,255,255,0.16);
         }
 
         .lang-btn.active {
             background: var(--primary);
             border-color: var(--primary);
-            font-weight: 700;
-            box-shadow: 0 4px 12px rgba(170, 20, 20, 0.35);
+            font-weight: 800;
+            box-shadow: 0 4px 12px rgba(170,20,20,0.35);
         }
 
         .hero {
             position: relative;
             overflow: hidden;
-            color: white;
+            color: #fff;
             text-align: center;
-            padding: clamp(52px, 8vw, 86px) 20px;
+            padding: clamp(48px, 8vw, 86px) 18px;
             background:
-                linear-gradient(135deg, rgba(127, 15, 15, 0.94), rgba(170, 20, 20, 0.92)),
+                linear-gradient(135deg, rgba(127,15,15,0.94), rgba(170,20,20,0.92)),
                 var(--primary);
         }
 
@@ -123,36 +114,34 @@
             position: absolute;
             inset: 0;
             background:
-                radial-gradient(circle at 20% 20%, rgba(255,255,255,0.18), transparent 28%),
+                radial-gradient(circle at 18% 20%, rgba(255,255,255,0.18), transparent 28%),
                 radial-gradient(circle at 80% 10%, rgba(217,164,65,0.24), transparent 25%);
             pointer-events: none;
         }
 
         .hero-inner {
             position: relative;
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
         }
 
         .hero h1 {
             margin: 0 0 12px;
-            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-size: clamp(2rem, 6vw, 3.4rem);
             line-height: 1.15;
-            letter-spacing: 0.02em;
-            word-wrap: break-word;
         }
 
         .hero p {
-            margin: 0 auto 18px;
-            max-width: 720px;
-            font-size: clamp(1rem, 2.5vw, 1.18rem);
+            margin: 0 auto;
+            max-width: 760px;
+            font-size: clamp(1rem, 2.4vw, 1.18rem);
             opacity: 0.95;
         }
 
         .badge-container {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 10px;
             margin-top: 22px;
         }
@@ -161,16 +150,44 @@
             background: #fff;
             color: var(--primary);
             padding: 8px 15px;
-            font-weight: 800;
             border-radius: 999px;
             font-size: 0.88rem;
+            font-weight: 900;
             white-space: nowrap;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-            border: 1px solid rgba(255,255,255,0.4);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.13);
+        }
+
+        .quick-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 26px;
+        }
+
+        .quick-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 12px 20px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 800;
+            backdrop-filter: blur(6px);
+            transition: 0.2s ease;
+        }
+
+        .quick-btn:hover {
+            transform: translateY(-2px);
+            background: rgba(255,255,255,0.22);
         }
 
         .page-wrap {
-            max-width: 980px;
+            max-width: 1080px;
             margin: 24px auto;
             padding: 0 16px;
         }
@@ -178,17 +195,17 @@
         .container {
             margin: 22px auto;
             padding: clamp(22px, 4vw, 34px);
-            background: rgba(255, 255, 255, 0.94);
+            background: rgba(255,255,255,0.95);
+            border: 1px solid rgba(234,223,213,0.95);
             border-radius: var(--radius);
             box-shadow: var(--shadow-soft);
-            border: 1px solid rgba(236, 226, 216, 0.9);
         }
 
         h2 {
             position: relative;
-            color: var(--dark);
             margin: 0 0 18px;
             padding-left: 16px;
+            color: var(--dark);
             font-size: clamp(1.35rem, 3vw, 1.8rem);
             line-height: 1.35;
         }
@@ -200,28 +217,12 @@
             top: 0.2em;
             width: 6px;
             height: 1.25em;
-            background: linear-gradient(180deg, var(--primary), var(--gold));
             border-radius: 999px;
-        }
-
-        h3 {
-            color: var(--dark);
-        }
-
-        strong {
-            color: #1d1d1d;
+            background: linear-gradient(180deg, var(--primary), var(--gold));
         }
 
         .lead {
             font-size: 1.03rem;
-        }
-
-        .highlight-box {
-            background: linear-gradient(135deg, #fff7ec, #fff);
-            border: 1px solid #f0d9bd;
-            border-radius: 14px;
-            padding: 16px 18px;
-            margin-top: 18px;
         }
 
         .gallery-grid {
@@ -238,12 +239,6 @@
             padding: 12px;
             border-radius: 14px;
             box-shadow: 0 4px 14px rgba(0,0,0,0.04);
-            transition: 0.22s ease;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-soft);
         }
 
         .gallery-img {
@@ -255,8 +250,6 @@
         }
 
         .gallery-caption {
-            font-size: 0.98rem;
-            color: #333;
             margin-top: 10px;
             font-weight: 800;
         }
@@ -271,595 +264,147 @@
             width: 190px;
             height: auto;
             border-radius: 10px;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
             background: #fff;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
         }
 
-        .spice-guide {
-            display: inline-flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: center;
-            background: #fff7f0;
-            border: 1px solid #f0d8c3;
+        .menu-tabs {
+            position: sticky;
+            top: 104px;
+            z-index: 900;
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding: 12px;
+            margin: -4px -6px 18px;
+            background: rgba(255,250,245,0.92);
+            backdrop-filter: blur(8px);
+            border-radius: 16px;
+            border: 1px solid rgba(234,223,213,0.75);
+        }
+
+        .tab-btn {
+            flex: 0 0 auto;
+            border: 1px solid var(--border);
+            background: #fff;
+            color: var(--text);
+            padding: 10px 15px;
             border-radius: 999px;
-            padding: 10px 16px;
-            margin-top: 4px;
+            cursor: pointer;
+            font-weight: 800;
+            font-size: 0.92rem;
+            transition: 0.2s ease;
+        }
+
+        .tab-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+            box-shadow: 0 6px 14px rgba(170,20,20,0.22);
+        }
+
+        .menu-note {
+            margin: 0 0 18px;
+            padding: 14px 16px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #fff7ec, #fff);
+            border: 1px solid #f0d9bd;
             color: #4a2a1f;
             font-weight: 700;
-            font-size: 0.95rem;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
         }
 
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
-            gap: 20px;
-            margin-top: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+            gap: 18px;
         }
 
-        .menu-item {
+        .menu-card {
             position: relative;
             overflow: hidden;
-            border: 1px solid var(--border);
-            padding: 22px 18px;
-            border-radius: 18px;
             background: #fff;
-            text-align: center;
+            border: 1px solid var(--border);
+            border-radius: 18px;
             box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            min-height: 370px;
+            text-align: center;
             transition: 0.22s ease;
         }
 
-        .menu-item::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(170,20,20,0.035), transparent 38%);
-            pointer-events: none;
-        }
-
-        .menu-item:hover {
+        .menu-card:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow);
             border-color: #e0c7b4;
         }
 
-        .menu-item img {
-            position: relative;
+        .menu-img-wrap {
+            background: #faf7f3;
+            padding: 16px;
+        }
+
+        .menu-card img {
             width: 100%;
-            max-width: 205px;
-            height: 205px;
+            max-width: 210px;
+            height: 185px;
             object-fit: cover;
+            border-radius: 16px;
+            background: #f2eee8;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+        }
+
+        .menu-card.ramen img {
             border-radius: 50%;
-            margin-bottom: 16px;
+            height: 205px;
+            max-width: 205px;
             border: 4px solid #f3ece5;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.09);
-            background: #f7f2ec;
         }
 
-        .menu-text-wrap {
-            position: relative;
-            width: 100%;
+        .no-img {
+            height: 217px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #faf7f3;
+            color: #b39a86;
+            font-size: 2rem;
         }
 
-        .menu-item h3 {
-            margin: 5px 0 8px;
-            font-size: 1.12rem;
+        .menu-info {
+            padding: 15px 14px 18px;
+        }
+
+        .menu-title {
+            margin: 0 0 10px;
+            font-size: 1.05rem;
             line-height: 1.45;
-            color: #1a1a1a;
-            word-wrap: break-word;
+            color: var(--dark);
         }
 
-        .menu-item .sub-name {
+        .menu-sub {
+            margin: -2px 0 9px;
             color: var(--muted);
-            font-size: 0.9rem;
-            margin: 6px 0 0;
+            font-size: 0.88rem;
         }
 
-        .price {
-            position: relative;
+        .menu-price {
+            margin: 0;
             color: var(--primary);
+            font-size: 1.25rem;
             font-weight: 900;
-            font-size: 1.35rem;
-            margin: 14px 0 0;
             letter-spacing: 0.01em;
         }
 
         .sns-container {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-top: 18px;
-        }
-
-        .sns-btn,
-        .map-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 12px 24px;
-            border-radius: 999px;
-            text-decoration: none;
-            font-weight: 800;
-            color: #fff;
-            font-size: 0.96rem;
-            transition: 0.2s ease;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-        }
-
-        .sns-btn:hover,
-        .map-btn:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.05);
-        }
-
-        .sns-instagram {
-            background: linear-gradient(135deg, #833ab4, #e1306c, #f77737);
-        }
-
-        .sns-tiktok {
-            background-color: #010101;
-        }
-
-        .info-list p {
-            margin: 14px 0;
-        }
-
-        .map-btn {
-            background: linear-gradient(135deg, #4285F4, #2b66d9);
-            margin-top: 18px;
-        }
-
-        .footer {
-            background:
-                linear-gradient(135deg, rgba(18,18,18,0.98), rgba(42,18,18,0.98)),
-                var(--dark);
-            color: white;
-            text-align: center;
-            padding: 34px 20px;
-            margin-top: 28px;
-            font-size: 0.9rem;
-        }
-
-        .footer p {
-            margin: 7px 0;
-            opacity: 0.94;
-        }
-
-        /* Language display control */
-        [data-lang] {
-            display: none;
-        }
-
-        body.lang-en [data-lang="en"],
-        body.lang-ja [data-lang="ja"],
-        body.lang-id [data-lang="id"] {
-            display: block;
-        }
-
-        span[data-lang] {
-            display: none;
-        }
-
-        body.lang-en span[data-lang="en"],
-        body.lang-ja span[data-lang="ja"],
-        body.lang-id span[data-lang="id"] {
-            display: inline;
-        }
-
-        @media (max-width: 640px) {
-            header {
-                position: static;
-            }
-
-            .hero {
-                padding: 44px 16px;
-            }
-
-            .badge {
-                font-size: 0.8rem;
-            }
-
-            .container {
-                border-radius: 14px;
-            }
-
-            .menu-item {
-                min-height: auto;
-            }
-
-            .spice-guide {
-                border-radius: 14px;
-                display: flex;
-            }
-        }
-    </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": "Menya Honolu Shinjuku Gyoenmae",
-      "alternateName": "麺屋 帆のる 新宿御苑前",
-      "servesCuisine": ["Halal Ramen", "Japanese", "Ramen"],
-      "telephone": "+81-3-5357-7664",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "B1F, Dia Palace Shinjuku 1-chome, 1-31-3 Shinjuku",
-        "addressLocality": "Shinjuku-ku",
-        "addressRegion": "Tokyo",
-        "postalCode": "160-0022",
-        "addressCountry": "JP"
-      },
-      "openingHours": [
-        "Mo-Su 11:30-15:00",
-        "Mo-Su 17:00-21:00"
-      ],
-      "priceRange": "¥¥",
-      "amenityFeature": [
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Prayer Room",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Halal Certified",
-          "value": true
-        }
-      ]
-    }
-    </script>
-</head>
-
-<body class="lang-en">
-
-    <header>
-        <h1>麺屋 帆のる / Menya Honolu</h1>
-        <p>Shinjuku Gyoenmae</p>
-
-        <nav class="lang-switcher" aria-label="Language switcher">
-            <button class="lang-btn active" type="button" data-set-lang="en" aria-pressed="true">English</button>
-            <button class="lang-btn" type="button" data-set-lang="ja" aria-pressed="false">日本語</button>
-            <button class="lang-btn" type="button" data-set-lang="id" aria-pressed="false">Bahasa Indonesia</button>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="hero-inner">
-            <h1 data-lang="en">Authentic Halal Ramen in Tokyo</h1>
-            <h1 data-lang="ja">東京で味わう本物のハラールラーメン</h1>
-            <h1 data-lang="id">Ramen Halal Otentik di Tokyo</h1>
-
-            <p data-lang="en">Experience Japan's favorite comfort food with 100% peace of mind.</p>
-            <p data-lang="ja">100%の安心感と共に、日本で愛されるラーメンをご堪能ください。</p>
-            <p data-lang="id">Nikmati makanan khas Jepang yang populer dengan kenyamanan 100% halal.</p>
-
-            <div class="badge-container">
-                <span class="badge" data-lang="en">100% HALAL CERTIFIED</span>
-                <span class="badge" data-lang="ja">100% ハラール認証済</span>
-                <span class="badge" data-lang="id">100% BERSERTIFIKAT HALAL</span>
-
-                <span class="badge" data-lang="en">PRAYER ROOM AVAILABLE</span>
-                <span class="badge" data-lang="ja">礼拝室あり</span>
-                <span class="badge" data-lang="id">TERSEDIA RUANG SHOLAT</span>
-            </div>
-        </div>
-    </section>
-
-    <main class="page-wrap">
-
-        <!-- ハラールポリシー＆店舗ギャラリー -->
-        <section class="container">
-            <h2 data-lang="en">Our Halal Policy & Facilities</h2>
-            <h2 data-lang="ja">ハラールへの取り組みと店内設備</h2>
-            <h2 data-lang="id">Kebijakan Halal & Fasilitas Kami</h2>
-
-            <p class="lead" data-lang="en">Our soup, noodles, and toppings contain <strong>NO pork, NO lard, and NO alcohol</strong>. We are strictly 100% Halal certified. We also provide a dedicated <strong>Prayer Space</strong> inside the restaurant for our Muslim guests, with Wudu space available.</p>
-            <p class="lead" data-lang="ja">当店のスープ、麺、トッピングには、<strong>豚肉、豚脂、ラード、アルコールを一切使用しておりません。</strong> 厳格な100%ハラール認証を取得しています。また、ムスリムのお客様のために店内に専用の<strong>礼拝スペース</strong>とお清め、ウドゥの環境を完備しています。</p>
-            <p class="lead" data-lang="id">Sup, mie, dan topping kami <strong>tidak mengandung babi, lemak babi, lard, maupun alkohol</strong>. Kami telah bersertifikat 100% Halal. Kami juga menyediakan <strong>Ruang Sholat</strong> khusus di dalam restoran untuk tamu Muslim kami, termasuk tempat wudhu.</p>
-
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="IMG_4169.jpeg" alt="Prayer Room" class="gallery-img" loading="lazy" decoding="async">
-                    <div class="gallery-caption">
-                        <span data-lang="en">Prayer Room</span>
-                        <span data-lang="ja">礼拝室</span>
-                        <span data-lang="id">Ruang Sholat</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="IMG_4171.jpeg" alt="Restaurant Interior" class="gallery-img" loading="lazy" decoding="async">
-                    <div class="gallery-caption">
-                        <span data-lang="en">Interior</span>
-                        <span data-lang="ja">店舗内観</span>
-                        <span data-lang="id">Interior Toko</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="IMG_4170.jpeg" alt="Restaurant Entrance" class="gallery-img" loading="lazy" decoding="async">
-                    <div class="gallery-caption">
-                        <span data-lang="en">Entrance</span>
-                        <span data-lang="ja">店舗外観</span>
-                        <span data-lang="id">Pintu Masuk</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cert-container">
-                <img src="Photoroom_20260627_215434.png" alt="Halal Certificate" class="cert-img" loading="lazy" decoding="async">
-            </div>
-        </section>
-
-        <!-- メニュー -->
-        <section class="container">
-            <h2 data-lang="en">Ramen Menu</h2>
-            <h2 data-lang="ja">ラーメンメニュー</h2>
-            <h2 data-lang="id">Menu Ramen</h2>
-
-            <div class="highlight-box">
-                <p class="spice-guide" data-lang="en">Spice Level: 🌶️🌶️ Medium Spicy / 🌶️🌶️🌶️🌶️ Extra Spicy</p>
-                <p class="spice-guide" data-lang="ja">辛さの目安：🌶️🌶️ 中辛 / 🌶️🌶️🌶️🌶️ 激辛</p>
-                <p class="spice-guide" data-lang="id">Level Pedas: 🌶️🌶️ Pedas Sedang / 🌶️🌶️🌶️🌶️ Sangat Pedas</p>
-            </div>
-
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <img src="Photoroom_20260627_194821.png" alt="Spicy Fried Chicken Ramen" loading="lazy" decoding="async">
-                    <div class="menu-text-wrap">
-                        <h3 data-lang="en">Spicy Fried Chicken Ramen 🌶️🌶️</h3>
-                        <h3 data-lang="ja">スパイシー唐揚げらーめん 🌶️🌶️</h3>
-                        <h3 data-lang="id">Ramen Ayam Goreng Pedas 🌶️🌶️</h3>
-                    </div>
-                    <p class="price">¥2,200</p>
-                </div>
-
-                <div class="menu-item">
-                    <img src="Photoroom_20260627_213230.png" alt="Spicy Beef Yakiniku Ramen" loading="lazy" decoding="async">
-                    <div class="menu-text-wrap">
-                        <h3 data-lang="en">Spicy Beef Yakiniku Ramen 🌶️🌶️</h3>
-                        <h3 data-lang="ja">スパイシー牛焼肉らーめん 🌶️🌶️</h3>
-                        <h3 data-lang="id">Ramen Sapi Yakiniku Pedas 🌶️🌶️</h3>
-                    </div>
-                    <p class="price">¥2,300</p>
-                </div>
-
-                <div class="menu-item">
-                    <img src="Photoroom_20260627_213305.png" alt="Spicy Ramen" loading="lazy" decoding="async">
-                    <div class="menu-text-wrap">
-                        <h3 data-lang="en">Spicy Ramen 🌶️🌶️</h3>
-                        <h3 data-lang="ja">スパイシーらーめん 🌶️🌶️</h3>
-                        <h3 data-lang="id">Ramen Pedas 🌶️🌶️</h3>
-                    </div>
-                    <p class="price">¥1,800</p>
-                </div>
-
-                <div class="menu-item">
-                    <img src="Photoroom_20260627_213346.png" alt="Extreme Spicy Ramen" loading="lazy" decoding="async">
-                    <div class="menu-text-wrap">
-                        <h3 data-lang="en">Extreme Spicy Ramen 🌶️🌶️🌶️🌶️</h3>
-                        <h3 data-lang="ja">激辛らーめん 🌶️🌶️🌶️🌶️</h3>
-                        <h3 data-lang="id">Ramen Sangat Pedas 🌶️🌶️🌶️🌶️</h3>
-                    </div>
-                    <p class="price">¥2,000</p>
-                </div>
-
-                <div class="menu-item">
-                    <img src="Photoroom_20260627_213449.png" alt="Special Rich Chicken Ramen" loading="lazy" decoding="async">
-                    <div class="menu-text-wrap">
-                        <h3 data-lang="en">Special Rich Chicken Ramen</h3>
-                        <h3 data-lang="ja">特製鶏白湯らーめん</h3>
-                        <h3 data-lang="id">Ramen Kaldu Ayam Spesial</h3>
-                    </div>
-                    <p class="price">¥1,800</p>
-                </div>
-
-                <div class="menu-item">
-                    <img src="Photoroom_20260627_213518.png" alt="Rich Chicken Ramen" loading="lazy" decoding="async">
-                    <div class="menu-text-wrap">
-                        <h3 data-lang="en">Rich Chicken Ramen</h3>
-                        <h3 data-lang="ja">鶏白湯らーめん</h3>
-                        <h3 data-lang="id">Ramen Kaldu Ayam</h3>
-                    </div>
-                    <p class="price">¥1,300</p>
-                </div>
-
-                <div class="menu-item">
-                    <img src="Photoroom_20260627_213545.png" alt="Fried Chicken Ramen" loading="lazy" decoding="async">
-                    <div class="menu-text-wrap">
-                        <h3 data-lang="en">Fried Chicken Ramen</h3>
-                        <h3 data-lang="ja">から揚げらーめん</h3>
-                        <h3 data-lang="id">Ramen Ayam Goreng</h3>
-                    </div>
-                    <p class="price">¥1,800</p>
-                </div>
-
-                <div class="menu-item">
-                    <img src="Photoroom_20260627_213612.png" alt="Beef Yakiniku Ramen" loading="lazy" decoding="async">
-                    <div class="menu-text-wrap">
-                        <h3 data-lang="en">Beef Yakiniku Ramen</h3>
-                        <h3 data-lang="ja">牛焼肉らーめん</h3>
-                        <h3 data-lang="id">Ramen Sapi Yakiniku</h3>
-                    </div>
-                    <p class="price">¥1,850</p>
-                </div>
-
-                <div class="menu-item">
-                    <img src="Photoroom_20260627_213739.png" alt="A5 Wagyu Soy-Sauce Ramen" loading="lazy" decoding="async">
-                    <div class="menu-text-wrap">
-                        <h3 data-lang="en">A5 Wagyu Soy-Sauce Ramen</h3>
-                        <h3 data-lang="ja">A5 和牛らーめん</h3>
-                        <h3 data-lang="id">Ramen Kecap Asin Sapi Wagyu A5</h3>
-                        <p class="sub-name">100g: ¥4,500 / 150g: ¥5,500</p>
-                    </div>
-                    <p class="price">¥4,500〜</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SNS -->
-        <section class="container" style="text-align: center;">
-            <h2 data-lang="en">Follow Our Social Media!</h2>
-            <h2 data-lang="ja">SNSで最新情報をチェック！</h2>
-            <h2 data-lang="id">Ikuti Media Sosial Kami!</h2>
-
-            <div class="sns-container">
-                <a href="https://www.instagram.com/honolu_shinjukugyoen?igsh=MTEwZTJnZmlsMXNmcQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="sns-btn sns-instagram">Instagram</a>
-                <a href="https://tiktok.com/@honoru.shinjukugyoen?_t=ZS-8tjf4w8wEK8&_r=1" target="_blank" rel="noopener noreferrer" class="sns-btn sns-tiktok">TikTok</a>
-            </div>
-        </section>
-
-        <!-- アクセス -->
-        <section class="container">
-            <h2 data-lang="en">Shop Information & Access</h2>
-            <h2 data-lang="ja">店舗情報・アクセス</h2>
-            <h2 data-lang="id">Informasi Toko & Akses</h2>
-
-            <div class="info-list">
-                <p>
-                    <strong>
-                        <span data-lang="en">Address</span>
-                        <span data-lang="ja">住所</span>
-                        <span data-lang="id">Alamat</span>:
-                    </strong><br>
-                    B1F, Dia Palace Shinjuku 1-chome, 1-31-3 Shinjuku, Shinjuku-ku, Tokyo 160-0022<br>
-                    〒160-0022 東京都新宿区新宿1丁目31-3 ダイアパレス新宿1丁目 B1階
-                </p>
-
-                <p>
-                    <strong>
-                        <span data-lang="en">Opening Hours</span>
-                        <span data-lang="ja">営業時間</span>
-                        <span data-lang="id">Jam Operasional</span>:
-                    </strong><br>
-                    Lunch: 11:30 - 15:00 (L.O. 14:30)<br>
-                    Dinner: 17:00 - 21:00 (L.O. 20:30)<br>
-                    <span data-lang="en">Open daily, except New Year holidays.</span>
-                    <span data-lang="ja">年中無休、年末年始を除く。</span>
-                    <span data-lang="id">Buka setiap hari, kecuali libur Tahun Baru.</span>
-                </p>
-
-                <p>
-                    <strong>
-                        <span data-lang="en">Seats</span>
-                        <span data-lang="ja">座席数</span>
-                        <span data-lang="id">Tempat Duduk</span>:
-                    </strong>
-                    19
-                    <span data-lang="en">seats</span>
-                    <span data-lang="ja">席</span>
-                    <span data-lang="id">kursi</span>
-                    (Counter: 3, Table: 16)
-                </p>
-
-                <p>
-                    <strong>
-                        <span data-lang="en">Phone</span>
-                        <span data-lang="ja">電話番号</span>
-                        <span data-lang="id">Telepon</span>:
-                    </strong>
-                    <a href="tel:0353577664">03-5357-7664</a>
-                </p>
-
-                <p>
-                    <strong>
-                        <span data-lang="en">Payment</span>
-                        <span data-lang="ja">お支払い方法</span>
-                        <span data-lang="id">Pembayaran</span>:
-                    </strong><br>
-                    Credit Cards, Transit IC, PayPay, Alipay, WeChat Pay
-                </p>
-            </div>
-
-            <h3 data-lang="en">How to get here, 1-minute walk</h3>
-            <h3 data-lang="ja">駅からの行き方、徒歩1分</h3>
-            <h3 data-lang="id">Cara Menuju ke Sini, 1 menit jalan kaki</h3>
-
-            <p data-lang="en">Take <strong>Exit 2</strong> from <strong>Shinjuku-gyoenmae Station</strong>, Tokyo Metro Marunouchi Line. Turn left immediately after exiting, then turn left at the very first intersection. Walk straight for a short distance. We are located on the basement floor, B1F, of the building next to Komoro Soba.</p>
-            <p data-lang="ja">東京メトロ丸ノ内線<strong>「新宿御苑前駅」2番出口</strong>を出て左に進みます。すぐの交差点を左に曲がり、少し歩くと「小諸そば」の隣にあるマンションの地下1階、B1Fに当店がございます。</p>
-            <p data-lang="id">Ambil <strong>Pintu Keluar 2</strong> dari <strong>Stasiun Shinjuku-gyoenmae</strong>, Tokyo Metro Marunouchi Line. Belok kiri segera setelah keluar, lalu belok kiri di persimpangan pertama. Berjalan lurus sebentar. Kami berada di lantai basement, B1F, dari bangunan di sebelah Komoro Soba.</p>
-
-            <div style="text-align: center;">
-                <a href="https://maps.google.com/?q=Menya+Honolu+Shinjuku+Gyoenmae" target="_blank" rel="noopener noreferrer" class="map-btn">
-                    <span data-lang="en">Open Google Maps</span>
-                    <span data-lang="ja">Google Mapsで開く</span>
-                    <span data-lang="id">Buka Google Maps</span>
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p data-lang="en">We accept Credit Cards, Transit IC, PayPay, Alipay, WeChat Pay, and more.</p>
-        <p data-lang="ja">クレジットカード、交通系IC、PayPay、Alipay、WeChat Pay等、各種決済に対応しています。</p>
-        <p data-lang="id">Kami menerima Kartu Kredit, Transit IC, PayPay, Alipay, WeChat Pay, dan lainnya.</p>
-        <p>&copy; Menya Honolu Shinjuku Gyoenmae. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        (function () {
-            const supportedLangs = ["en", "ja", "id"];
-            const storageKey = "menyaHonoluSelectedLang";
-
-            function normalizeLang(lang) {
-                return supportedLangs.includes(lang) ? lang : "en";
-            }
-
-            function applyLang(lang, shouldSave = true) {
-                const selectedLang = normalizeLang(lang);
-
-                document.body.classList.remove("lang-en", "lang-ja", "lang-id");
-                document.body.classList.add("lang-" + selectedLang);
-                document.documentElement.lang = selectedLang;
-
-                document.querySelectorAll(".lang-btn").forEach(function (btn) {
-                    const isActive = btn.dataset.setLang === selectedLang;
-                    btn.classList.toggle("active", isActive);
-                    btn.setAttribute("aria-pressed", isActive ? "true" : "false");
-                });
-
-                if (shouldSave) {
-                    localStorage.setItem(storageKey, selectedLang);
-                }
-            }
-
-            function getInitialLang() {
-                const savedLang = localStorage.getItem(storageKey);
-                if (supportedLangs.includes(savedLang)) {
-                    return savedLang;
-                }
-
-                const browserLang = navigator.language || navigator.userLanguage || "en";
-
-                if (browserLang.startsWith("ja")) {
-                    return "ja";
-                }
-
-                if (browserLang.startsWith("id")) {
-                    return "id";
-                }
-
-                return "en";
-            }
-
-            document.addEventListener("DOMContentLoaded", function () {
-                applyLang(getInitialLang(), false);
-
-                document.querySelectorAll(".lang-btn").forEach(function (btn) {
-                    btn.addEventListener("click", function () {
-                        applyLang(btn.dataset.setLang, true);
-                    });
-                });
-            });
-        })();
-    </script>
-</body>
-</html>
+            justify-content: center
