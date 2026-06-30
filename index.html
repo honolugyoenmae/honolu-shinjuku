@@ -1,305 +1,688 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menya Honolu Shinjuku Gyoenmae | 100% Halal Ramen in Tokyo</title>
-  <meta name="description" content="100% Halal certified authentic Japanese Ramen in Shinjuku, Tokyo. Famous for spicy chicken ramen, A5 Wagyu ramen. 1 min from Shinjuku-gyoenmae Station. Prayer room available.">
-  <meta property="og:title" content="Menya Honolu Shinjuku Gyoenmae | 100% Halal Ramen">
-  <meta property="og:description" content="100% Halal certified ramen in Tokyo. Prayer room available.">
-  <meta property="og:image" content="Photoroom_20260627_194821.png">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800;900&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Menya Honolu Shinjuku Gyoenmae",
-    "image": "Photoroom_20260627_194821.png",
-    "servesCuisine": ["Japanese", "Halal", "Ramen"],
-    "priceRange": "¥¥",
-    "telephone": "+81-3-5357-7664",
-    "address": { "@type": "PostalAddress", "streetAddress": "B1F, Dia Palace Shinjuku 1-chome, 1-31-3 Shinjuku", "addressLocality": "Shinjuku-ku", "addressRegion": "Tokyo", "postalCode": "160-0022", "addressCountry": "JP" },
-    "amenityFeature": [
-      { "@type": "LocationFeatureSpecification", "name": "Halal Certified", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Prayer Room", "value": true }
-    ]
-  }
-  </script>
-
-  <style>
-    :root { --primary:#c92a2a; --dark:#1f1a18; --gray:#f5f3f0; --text:#4a423f; --border:#e6e0d8; }
-    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-    body { margin:0; padding:0 0 70px; font-family:'Plus Jakarta Sans','Noto Sans JP',sans-serif; color:var(--text); line-height:1.6; }
-    img { display:block; max-width:100%; height:auto; }
-    a { color:inherit; text-decoration:none; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menya Honolu Shinjuku Gyoenmae | Authentic Halal Ramen in Tokyo</title>
     
-    /* Nav */
-    nav { position:sticky; top:0; z-index:100; background:rgba(255,255,255,.95); backdrop-filter:blur(10px); border-bottom:1px solid var(--border); padding:12px 18px; display:flex; justify-content:space-between; align-items:center; }
-    .logo { font-size:1.1rem; font-weight:900; color:var(--dark); }
-    .logo span { color:var(--primary); }
-    .lang-switch { display:flex; gap:4px; background:var(--gray); padding:4px; border-radius:99px; }
-    .lang-btn { border:none; background:none; padding:6px 12px; font-size:.8rem; font-weight:800; border-radius:99px; cursor:pointer; color:var(--text); }
-    .lang-btn.active { background:#fff; color:var(--primary); box-shadow:0 2px 8px rgba(0,0,0,.08); }
-
-    /* Hero */
-    .hero { position:relative; overflow:hidden; color:#fff; text-align:center; padding:90px 18px; background:#1b1210; }
-    .hero-bg-grid { position:absolute; inset:0; display:grid; grid-template-columns:repeat(2, 1fr); grid-template-rows:repeat(2, 1fr); z-index:-3; opacity:0.6; }
-    .hero-bg-grid img { width:100%; height:100%; object-fit:cover; }
-    .hero::before { content:""; position:absolute; inset:0; z-index:-2; background:linear-gradient(135deg, rgba(60,8,8,.8), rgba(170,20,20,.6)); }
-    .hero-inner { position:relative; max-width:800px; margin:0 auto; animation:fadeUp .8s ease; }
-    @keyframes fadeUp { from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:none} }
-    .eyebrow { display:inline-block; margin-bottom:16px; padding:6px 16px; border:1px solid rgba(255,255,255,.4); border-radius:99px; font-size:.75rem; font-weight:800; letter-spacing:2px; background:rgba(0,0,0,.2); }
-    .hero h1 { margin:0 0 16px; font-size:clamp(2rem,6vw,3.2rem); font-weight:900; line-height:1.1; }
-    .hero p { margin:0 auto; max-width:600px; font-size:1.05rem; opacity:.9; }
-    .badge-container { display:flex; justify-content:center; gap:10px; margin-top:24px; flex-wrap:wrap; }
-    .badge { display:inline-flex; align-items:center; gap:6px; background:#fff; color:var(--primary); padding:8px 16px; border-radius:99px; font-weight:800; font-size:.85rem; box-shadow:0 4px 12px rgba(0,0,0,.15); }
-    .badge svg { width:16px; height:16px; fill:currentColor; }
-
-    /* Layout */
-    .container { max-width:1000px; margin:0 auto; padding:60px 18px; }
-    .sec-title { text-align:center; font-size:2rem; font-weight:900; color:var(--dark); margin-bottom:40px; }
-
-    /* Menu Grid */
-    .menu-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:24px; }
-    .menu-card { background:#fff; border:1px solid var(--border); border-radius:18px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,.04); transition:.3s; display:flex; flex-direction:column; }
-    .menu-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(0,0,0,.08); }
-    .img-wrap { position:relative; padding-top:75%; background:var(--gray); overflow:hidden; }
-    .img-wrap img { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; transition:.5s; }
-    .menu-card:hover .img-wrap img { transform:scale(1.05); }
-    .menu-tag { position:absolute; top:12px; left:12px; background:var(--primary); color:#fff; font-size:.7rem; font-weight:800; padding:4px 10px; border-radius:6px; letter-spacing:1px; z-index:2; }
-    .menu-info { padding:20px; flex-grow:1; display:flex; flex-direction:column; }
-    .menu-name { font-size:1.15rem; font-weight:800; color:var(--dark); margin:0 0 8px; line-height:1.3; }
-    .menu-desc { font-size:.85rem; color:#666; margin:0 0 16px; flex-grow:1; }
-    .menu-price { font-size:1.25rem; font-weight:900; color:var(--primary); margin:0; }
-
-    /* Access */
-    .access-box { background:var(--gray); border-radius:18px; padding:32px 24px; text-align:center; }
-    .access-box h3 { margin:0 0 16px; font-size:1.3rem; color:var(--dark); }
-    .access-box p { margin:0 0 12px; font-size:.95rem; }
-    .map-btn { display:inline-flex; align-items:center; gap:8px; background:var(--dark); color:#fff; padding:12px 24px; border-radius:99px; font-weight:700; margin-top:12px; transition:.2s; }
-    .map-btn:hover { background:var(--primary); }
-
-    /* Fixed CTA */
-    .fixed-cta { position:fixed; bottom:0; left:0; right:0; background:#fff; display:flex; box-shadow:0 -4px 20px rgba(0,0,0,.08); z-index:90; padding:10px 18px 18px; border-top:1px solid var(--border); }
-    .cta-btn { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; font-size:.7rem; font-weight:800; color:var(--text); padding:8px 0; }
-    .cta-btn svg { width:22px; height:22px; fill:var(--dark); }
-    .cta-btn.main { background:var(--primary); color:#fff; border-radius:12px; flex:1.5; margin:0 8px; }
-    .cta-btn.main svg { fill:#fff; }
-
-    @media (min-width: 768px) {
-      body { padding-bottom: 0; }
-      .fixed-cta { display: none; }
-      .hero { padding: 140px 18px; }
+    <!-- SEO & OGP Meta Tags -->
+    <meta name="description" content="Experience authentic Halal Ramen at Menya Honolu Shinjuku Gyoenmae in Tokyo. Featuring our premium A5 Wagyu Ramen and rich chicken broth. Muslim-friendly, perfectly crafted.">
+    <meta name="keywords" content="Halal Ramen, Tokyo, Shinjuku, Menya Honolu, A5 Wagyu, Muslim Friendly, Japanese Food">
+    <meta property="og:title" content="Menya Honolu Shinjuku Gyoenmae | Authentic Halal Ramen">
+    <meta property="og:description" content="Savor the best Halal Ramen in Tokyo, featuring our exclusive A5 Wagyu Ramen.">
+    <meta property="og:image" content="https://example.com/images/og-image.jpg">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:type" content="restaurant">
+    
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Menya Honolu Shinjuku Gyoenmae",
+      "image": "https://example.com/images/ramen-hero.jpg",
+      "description": "Authentic Halal Ramen restaurant in Shinjuku, Tokyo, famous for rich chicken broth and A5 Wagyu Ramen.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2-chome-7-11, Kuwayama Building 102, Shinjuku",
+        "addressLocality": "Shinjuku City",
+        "addressRegion": "Tokyo",
+        "postalCode": "160-0022",
+        "addressCountry": "JP"
+      },
+      "servesCuisine": "Halal Japanese Ramen",
+      "priceRange": "$$",
+      "telephone": "+81-3-0000-0000"
     }
-  </style>
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Styles -->
+    <style>
+        :root {
+            --primary-color: #d32f2f; /* Deep Red for Ramen/Japan vibe */
+            --primary-hover: #b71c1c;
+            --bg-color: #fcfcfc;
+            --text-color: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --gold: #f5b041;
+            --halal-green: #2ecc71;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            position: relative;
+            height: 80vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Overlay */
+            z-index: 1;
+        }
+
+        .hero picture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 20px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 6px rgba(211, 47, 47, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: var(--text-color);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+
+        /* About Section with Badge */
+        .about-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .halal-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(46, 204, 113, 0.1);
+            border: 2px solid var(--halal-green);
+            color: var(--halal-green);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .halal-badge svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">Honolu <span>Ramen</span></div>
-    <div class="lang-switch">
-      <button class="lang-btn active" onclick="switchLang('en', this)">EN</button>
-      <button class="lang-btn" onclick="switchLang('id', this)">ID</button>
-      <button class="lang-btn" onclick="switchLang('ja', this)">JA</button>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">Menya Honolu</a>
+            <div class="lang-switcher">
+                <!-- event.currentTargetへの依存を廃止し、引数で直接言語コードを渡す -->
+                <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+                <button class="lang-btn" onclick="switchLanguage('ja')">JP</button>
+                <button class="lang-btn" onclick="switchLanguage('id')">ID</button>
+                <button class="lang-btn" onclick="switchLanguage('ar')">AR</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <picture>
+            <source srcset="images/hero-ramen.webp" type="image/webp">
+            <img src="images/hero-ramen.jpg" alt="Delicious Halal Ramen" loading="eager">
+        </picture>
+        <div class="hero-content">
+            <h1 class="hero-title" data-i18n="hero_title">Authentic Halal Ramen in Tokyo</h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">Experience the Rich Chicken Broth & Premium Wagyu</p>
+            <a href="#menu" class="btn-primary" data-i18n="hero_btn">View Menu</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <h2 class="section-title" data-i18n="about_title">Our Commitment</h2>
+        <div class="about-wrapper">
+            <div class="about-text">
+                <p data-i18n="about_desc1">At Menya Honolu, we are dedicated to serving authentic Japanese Ramen that everyone can enjoy. Our signature rich chicken broth is simmered to perfection, creating a deep, umami-packed flavor.</p>
+                <p data-i18n="about_desc2">We proudly serve 100% Halal-certified ingredients, ensuring a safe and delightful dining experience for our Muslim guests from around the world.</p>
+                
+                <div class="halal-badge">
+                    <!-- Check icon SVG -->
+                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span data-i18n="halal_badge">100% Halal Certified Ingredients</span>
+                </div>
+            </div>
+            <div class="about-image">
+                <picture>
+                    <source srcset="images/about-store.webp" type="image/webp">
+                    <img src="images/about-store.jpg" alt="Menya Honolu Shinjuku Gyoenmae Storefront" loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </section>
+    <!-- 追加のCSS (Part 2: Menu, Location, CTA) -->
+    <style>
+        /* Menu Section */
+        .menu-bg { background-color: #f9f9f9; }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .menu-item {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .menu-img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 220px;
+        }
+        .menu-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* 和牛用プレミアムバッジ */
+        .premium-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--gold);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .menu-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+        .menu-price {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .menu-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            flex-grow: 1;
+        }
+
+        /* Location Section */
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .address-box {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+            max-width: 600px;
+            margin: -50px auto 0;
+            position: relative;
+            z-index: 2;
+        }
+        .address-box h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+        .address-text {
+            font-size: 1.05rem;
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        /* Mobile Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: var(--white);
+            padding: 15px 20px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 999;
+            display: none; /* Hide on desktop */
+            justify-content: center;
+        }
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(211, 47, 47, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .sticky-cta {
+                display: flex;
+            }
+            body {
+                padding-bottom: 80px; /* Prevent footer overlap */
+            }
+        }
+    </style>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-bg">
+        <div class="container">
+            <h2 class="section-title" data-i18n="menu_title">Our Menu</h2>
+            <div class="menu-grid">
+                <!-- Item 1: A5 Wagyu Ramen -->
+                <div class="menu-item">
+                    <div class="menu-img-wrapper">
+                        <span class="premium-badge" data-i18n="premium_badge">Premium</span>
+                        <picture>
+                            <source srcset="images/menu-wagyu.webp" type="image/webp">
+                            <img src="images/menu-wagyu.jpg" alt="A5 Wagyu Halal Ramen" class="menu-img" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-title" data-i18n="menu_wagyu_title">A5 Wagyu Halal Ramen</h3>
+                        <!-- 価格を分かりやすく整形 -->
+                        <div class="menu-price">¥3,800 <span style="font-size:0.8rem; font-weight:normal;">(Tax Inc.)</span></div>
+                        <p class="menu-desc" data-i18n="menu_wagyu_desc">Experience the ultimate luxury. Melt-in-your-mouth top grade A5 Halal Wagyu beef served over our signature rich chicken broth ramen.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Rich Chicken Ramen -->
+                <div class="menu-item">
+                    <div class="menu-img-wrapper">
+                        <picture>
+                            <source srcset="images/menu-chicken.webp" type="image/webp">
+                            <img src="images/menu-chicken.jpg" alt="Rich Chicken Halal Ramen" class="menu-img" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-title" data-i18n="menu_chicken_title">Rich Chicken Ramen</h3>
+                        <div class="menu-price">¥1,200 <span style="font-size:0.8rem; font-weight:normal;">(Tax Inc.)</span></div>
+                        <p class="menu-desc" data-i18n="menu_chicken_desc">Our classic signature dish. A thick, creamy, and umami-rich chicken broth simmered for hours, topped with tender chicken chashu.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Spicy Chicken Ramen -->
+                <!-- SOLD OUT表記はUX向上のため完全に非表示（または在庫状況に応じてこのブロックごと隠す運用を想定） -->
+                <div class="menu-item">
+                    <div class="menu-img-wrapper">
+                        <picture>
+                            <source srcset="images/menu-spicy.webp" type="image/webp">
+                            <img src="images/menu-spicy.jpg" alt="Spicy Chicken Halal Ramen" class="menu-img" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-title" data-i18n="menu_spicy_title">Spicy Chicken Ramen</h3>
+                        <div class="menu-price">¥1,350 <span style="font-size:0.8rem; font-weight:normal;">(Tax Inc.)</span></div>
+                        <p class="menu-desc" data-i18n="menu_spicy_desc">A perfect blend of our rich chicken broth and a special spicy kick. Recommended for those who love bold and fiery flavors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="container">
+        <h2 class="section-title" data-i18n="loc_title">Location</h2>
+        
+        <div class="map-container">
+            <!-- Google Maps Embed -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.4867138385253!2d139.7118314!3d35.6896269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d1d4d3a2c2b%3A0x9d4b4a5303c7270!2sMenya%20Honolu%20Shinjuku%20Gyoenmae!5e0!3m2!1sen!2sjp!4v1600000000000!5m2!1sen!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="address-box">
+            <h3>Menya Honolu Shinjuku Gyoenmae</h3>
+            <!-- 住所を綺麗に整形（<br>を使用して視認性を向上） -->
+            <div class="address-text" data-i18n="address">
+                Kuwayama Building 102<br>
+                2-chome-7-11 Shinjuku, Shinjuku City<br>
+                Tokyo 160-0022, Japan
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="sticky-cta">
+        <a href="https://goo.gl/maps/example" target="_blank" class="cta-btn" data-i18n="cta_btn">
+            📍 Get Directions
+        </a>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-bg-grid">
-      <!-- WebP対応構造（pictureタグ） -->
-      <picture><source srcset="IMG_9205.webp" type="image/webp"><img src="IMG_9205.jpeg" alt="Staff"></picture>
-      <picture><source srcset="Photoroom_20260627_194821.webp" type="image/webp"><img src="Photoroom_20260627_194821.png" alt="Ramen"></picture>
-      <picture><source srcset="IMG_9612.webp" type="image/webp"><img src="IMG_9612.png" alt="Customers"></picture>
-      <picture><source srcset="Photoroom_20260627_194200.webp" type="image/webp"><img src="Photoroom_20260627_194200.png" alt="Ramen"></picture>
-    </div>
-    <div class="hero-inner">
-      <span class="eyebrow lang-en">Welcome to Tokyo</span>
-      <span class="eyebrow lang-id" style="display:none;">Selamat Datang di Tokyo</span>
-      <span class="eyebrow lang-ja" style="display:none;">東京へようこそ</span>
-      
-      <h1 class="lang-en">Authentic Halal Ramen in Shinjuku</h1>
-      <h1 class="lang-id" style="display:none;">Ramen Halal Otentik di Shinjuku</h1>
-      <h1 class="lang-ja" style="display:none;">新宿で味わう本格ハラールラーメン</h1>
-      
-      <p class="lang-en">Experience the rich taste of Japan with 0% compromise. Prayer room available inside.</p>
-      <p class="lang-id" style="display:none;">Nikmati cita rasa khas Jepang tanpa kompromi. Tersedia ruang sholat.</p>
-      <p class="lang-ja" style="display:none;">妥協なしの本格ラーメン。礼拝室も完備しております。</p>
-      
-      <div class="badge-container">
-        <div class="badge">
-          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-          <span class="lang-en">100% BERSERTIFIKAT HALAL</span>
-          <span class="lang-id" style="display:none;">100% BERSERTIFIKAT HALAL</span>
-          <span class="lang-ja" style="display:none;">100% ハラール認証済</span>
-        </div>
-        <div class="badge">
-          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/></svg>
-          <span class="lang-en">1 min from Station</span>
-          <span class="lang-id" style="display:none;">1 menit dari Stasiun</span>
-          <span class="lang-ja" style="display:none;">駅から徒歩1分</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Menya Honolu. All rights reserved.</p>
+    </footer>
 
-  <!-- Menu Section -->
-  <section class="container" id="menu">
-    <h2 class="sec-title lang-en">Our Menu</h2>
-    <h2 class="sec-title lang-id" style="display:none;">Menu Kami</h2>
-    <h2 class="sec-title lang-ja" style="display:none;">メニュー</h2>
+    <!-- i18n Script -->
+    <script>
+        // 翻訳データ（英語、日本語、インドネシア語、アラビア語）
+        const translations = {
+            en: {
+                hero_title: "Authentic Halal Ramen in Tokyo",
+                hero_subtitle: "Experience the Rich Chicken Broth & Premium Wagyu",
+                hero_btn: "View Menu",
+                about_title: "Our Commitment",
+                about_desc1: "At Menya Honolu, we are dedicated to serving authentic Japanese Ramen that everyone can enjoy. Our signature rich chicken broth is simmered to perfection, creating a deep, umami-packed flavor.",
+                about_desc2: "We proudly serve 100% Halal-certified ingredients, ensuring a safe and delightful dining experience for our Muslim guests from around the world.",
+                halal_badge: "100% Halal Certified Ingredients",
+                menu_title: "Our Menu",
+                premium_badge: "Premium",
+                menu_wagyu_title: "A5 Wagyu Halal Ramen",
+                menu_wagyu_desc: "Experience the ultimate luxury. Melt-in-your-mouth top grade A5 Halal Wagyu beef served over our signature rich chicken broth ramen.",
+                menu_chicken_title: "Rich Chicken Ramen",
+                menu_chicken_desc: "Our classic signature dish. A thick, creamy, and umami-rich chicken broth simmered for hours, topped with tender chicken chashu.",
+                menu_spicy_title: "Spicy Chicken Ramen",
+                menu_spicy_desc: "A perfect blend of our rich chicken broth and a special spicy kick. Recommended for those who love bold and fiery flavors.",
+                loc_title: "Location",
+                address: "Kuwayama Building 102<br>2-chome-7-11 Shinjuku, Shinjuku City<br>Tokyo 160-0022, Japan",
+                cta_btn: "📍 Get Directions"
+            },
+            ja: {
+                hero_title: "東京で味わう、本物のハラールラーメン",
+                hero_subtitle: "濃厚鶏白湯と最高級A5和牛の共演",
+                hero_btn: "メニューを見る",
+                about_title: "私たちのこだわり",
+                about_desc1: "麺屋帆のるは、誰もが安心して楽しめる本格的な日本のラーメンを提供しています。特製の鶏白湯スープは、うまみを最大限に引き出すためじっくりと煮込んでいます。",
+                about_desc2: "世界中のムスリムのお客様に美味しく安全に召し上がっていただけるよう、100%ハラール認証を受けた食材のみを使用しています。",
+                halal_badge: "100% ハラール認証食材使用",
+                menu_title: "メニュー",
+                premium_badge: "プレミアム",
+                menu_wagyu_title: "A5和牛 ハラールラーメン",
+                menu_wagyu_desc: "究極の贅沢。口の中でとろける最高級A5ハラール和牛を、自慢の濃厚鶏白湯ラーメンに乗せてご提供します。",
+                menu_chicken_title: "濃厚鶏白湯ラーメン",
+                menu_chicken_desc: "定番の看板メニュー。じっくり煮込んだクリーミーで旨味たっぷりの鶏白湯スープに、柔らかな鶏チャーシューをトッピング。",
+                menu_spicy_title: "旨辛鶏白湯ラーメン",
+                menu_spicy_desc: "濃厚な鶏白湯スープに特製の辛味をブレンド。スパイシーな味わいがお好みの方におすすめです。",
+                loc_title: "アクセス",
+                address: "〒160-0022 東京都新宿区<br>新宿2丁目7-11<br>桑山ビル 102",
+                cta_btn: "📍 Google Mapsで見る"
+            },
+            id: {
+                hero_title: "Ramen Halal Otentik di Tokyo",
+                hero_subtitle: "Rasakan Kaldu Ayam Kental & Wagyu Premium",
+                hero_btn: "Lihat Menu",
+                about_title: "Komitmen Kami",
+                about_desc1: "Di Menya Honolu, kami berdedikasi menyajikan Ramen Jepang otentik yang dapat dinikmati semua orang. Kaldu ayam khas kami direbus dengan sempurna, menciptakan rasa umami yang mendalam.",
+                about_desc2: "Kami bangga menyajikan 100% bahan bersertifikat Halal, memastikan pengalaman bersantap yang aman dan menyenangkan bagi tamu Muslim kami dari seluruh dunia.",
+                halal_badge: "100% Bahan Bersertifikat Halal",
+                menu_title: "Menu Kami",
+                premium_badge: "Premium",
+                menu_wagyu_title: "Ramen Halal Wagyu A5",
+                menu_wagyu_desc: "Rasakan kemewahan tertinggi. Daging sapi Halal Wagyu A5 kelas atas yang lumer di mulut disajikan di atas ramen kaldu ayam kental khas kami.",
+                menu_chicken_title: "Ramen Ayam Kental",
+                menu_chicken_desc: "Hidangan khas klasik kami. Kaldu ayam yang kental, lembut, dan kaya umami direbus berjam-jam, ditaburi chashu ayam yang empuk.",
+                menu_spicy_title: "Ramen Ayam Pedas",
+                menu_spicy_desc: "Perpaduan sempurna kaldu ayam kental kami dan rasa pedas spesial. Direkomendasikan bagi pecinta rasa berani dan pedas.",
+                loc_title: "Lokasi",
+                address: "Kuwayama Building 102<br>2-chome-7-11 Shinjuku, Shinjuku City<br>Tokyo 160-0022, Japan",
+                cta_btn: "📍 Dapatkan Petunjuk Arah"
+            },
+            ar: {
+                hero_title: "رامن حلال أصيل في طوكيو",
+                hero_subtitle: "استمتع بمرق الدجاج الغني ولحم الواغيو الفاخر",
+                hero_btn: "عرض القائمة",
+                about_title: "التزامنا",
+                about_desc1: "في مينيا هونولو، نحن مكرسون لتقديم الرامن الياباني الأصيل الذي يمكن للجميع الاستمتاع به. يتم غلي مرق الدجاج الغني الخاص بنا للوصول إلى الكمال، مما يخلق نكهة أومامي العميقة.",
+                about_desc2: "نحن فخورون بتقديم مكونات معتمدة حلال بنسبة 100%، مما يضمن تجربة طعام آمنة وممتعة لضيوفنا المسلمين من جميع أنحاء العالم.",
+                halal_badge: "مكونات معتمدة حلال 100%",
+                menu_title: "قائمتنا",
+                premium_badge: "ممتاز",
+                menu_wagyu_title: "رامن واغيو A5 حلال",
+                menu_wagyu_desc: "استمتع بأقصى درجات الفخامة. لحم بقر واغيو حلال من الدرجة الممتازة A5 يذوب في الفم يُقدم فوق رامن مرق الدجاج الغني المميز لدينا.",
+                menu_chicken_title: "رامن الدجاج الغني",
+                menu_chicken_desc: "طبقنا الكلاسيكي المميز. مرق دجاج سميك وكريمي وغني بنكهة أومامي يُغلى لساعات، يعلوه دجاج تشاشو الطري.",
+                menu_spicy_title: "رامن الدجاج الحار",
+                menu_spicy_desc: "مزيج مثالي من مرق الدجاج الغني واللمسة الحارة الخاصة. يوصى به لمحبي النكهات القوية والحارة.",
+                loc_title: "الموقع",
+                address: "مبنى كواياما ١٠٢<br>٢-تشومي-٧-١١ شينجوكو، مدينة شينجوكو<br>طوكيو ١٦٠-٠٠٢٢، اليابان",
+                cta_btn: "📍 احصل على الاتجاهات"
+            }
+        };
 
-    <div class="menu-grid">
-      <!-- Item 1 -->
-      <div class="menu-card">
-        <div class="img-wrap">
-          <span class="menu-tag">NO.1 POPULAR</span>
-          <picture><source srcset="Photoroom_20260627_194821.webp" type="image/webp"><img src="Photoroom_20260627_194821.png" alt="Spicy Ramen" loading="lazy"></picture>
-        </div>
-        <div class="menu-info">
-          <h3 class="menu-name lang-en">Spicy Fried Chicken Ramen</h3>
-          <h3 class="menu-name lang-id" style="display:none;">Ramen Ayam Goreng Pedas</h3>
-          <h3 class="menu-name lang-ja" style="display:none;">スパイシー唐揚げラーメン</h3>
-          <p class="menu-desc lang-en">Rich chicken broth topped with crispy halal fried chicken and special spicy sauce.</p>
-          <p class="menu-desc lang-id" style="display:none;">Kaldu ayam kaya rasa dengan topping ayam goreng halal renyah & saus pedas spesial.</p>
-          <p class="menu-desc lang-ja" style="display:none;">濃厚鶏白湯にサクサクのハラール唐揚げと特製旨辛ダレをトッピング。</p>
-          <p class="menu-price">¥2,200</p>
-        </div>
-      </div>
+        // event.currentTarget に依存しない堅牢な言語切り替え関数
+        function switchLanguage(lang) {
+            // 1. テキストの更新 (innerHTML を使用して <br> タグ等のパースを維持)
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
 
-      <!-- Item 2 -->
-      <div class="menu-card">
-        <div class="img-wrap">
-          <span class="menu-tag" style="background: #d9a441;">PREMIUM</span>
-          <picture><source srcset="Photoroom_20260627_195537.webp" type="image/webp"><img src="Photoroom_20260627_195537.png" alt="Wagyu Ramen" loading="lazy"></picture>
-        </div>
-        <div class="menu-info">
-          <h3 class="menu-name lang-en">A5 Wagyu Soy-Sauce Ramen</h3>
-          <h3 class="menu-name lang-id" style="display:none;">Ramen Shoyu Wagyu A5</h3>
-          <h3 class="menu-name lang-ja" style="display:none;">A5和牛醤油ラーメン</h3>
-          <p class="menu-desc lang-en">Luxurious clear broth topped with melting A5 Halal Wagyu slices.</p>
-          <p class="menu-desc lang-id" style="display:none;">Kaldu jernih mewah dengan irisan Daging Wagyu Halal A5 yang lumer di mulut.</p>
-          <p class="menu-desc lang-ja" style="display:none;">とろけるA5ハラール和牛を贅沢に乗せた至高のあっさり醤油ラーメン。</p>
-          <p class="menu-price">¥4,500</p>
-        </div>
-      </div>
+            // 2. 言語ボタンのアクティブ状態の更新
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            // 押された言語コードと一致するボタンをCSSセレクタで特定
+            const activeBtn = document.querySelector(`.lang-btn[onclick="switchLanguage('${lang}')"]`);
+            if (activeBtn) {
+                activeBtn.classList.add('active');
+            }
 
-      <!-- Item 3: Curry (Image Updated) -->
-      <div class="menu-card">
-        <div class="img-wrap">
-          <picture><source srcset="Photoroom_20260221_143537.webp" type="image/webp"><img src="Photoroom_20260221_143537.jpeg" alt="Karaage Curry" loading="lazy"></picture>
-        </div>
-        <div class="menu-info">
-          <h3 class="menu-name lang-en">Karaage Curry</h3>
-          <h3 class="menu-name lang-id" style="display:none;">Kari Ayam Goreng</h3>
-          <h3 class="menu-name lang-ja" style="display:none;">唐揚げカレー</h3>
-          <p class="menu-desc lang-en">Japanese style rich curry served with our signature juicy fried chicken.</p>
-          <p class="menu-desc lang-id" style="display:none;">Kari kental gaya Jepang disajikan dengan ayam goreng juicy khas kami.</p>
-          <p class="menu-desc lang-ja" style="display:none;">じっくり煮込んだ和風カレーに自慢のジューシー唐揚げをトッピング。</p>
-          <p class="menu-price">¥1,600</p>
-        </div>
-      </div>
-
-      <!-- Item 4: Kids Ramen (New) -->
-      <div class="menu-card">
-        <div class="img-wrap">
-          <picture><source srcset="Photoroom_20260627_194200.webp" type="image/webp"><img src="Photoroom_20260627_194200.png" alt="Kids Ramen" loading="lazy"></picture>
-        </div>
-        <div class="menu-info">
-          <h3 class="menu-name lang-en">Kids Ramen</h3>
-          <h3 class="menu-name lang-id" style="display:none;">Ramen Anak-anak</h3>
-          <h3 class="menu-name lang-ja" style="display:none;">お子様らーめん</h3>
-          <p class="menu-desc lang-en">Mild and friendly portion for kids.</p>
-          <p class="menu-desc lang-id" style="display:none;">Porsi yang ramah dan lembut untuk anak-anak.</p>
-          <p class="menu-desc lang-ja" style="display:none;">お子様向けの優しい味わいと食べやすいサイズのラーメン。</p>
-          <p class="menu-price">¥1,000</p>
-        </div>
-      </div>
-
-      <!-- Item 5: Gyoza -->
-      <div class="menu-card">
-        <div class="img-wrap">
-          <picture><source srcset="Photoroom_20260627_202306.webp" type="image/webp"><img src="Photoroom_20260627_202306.png" alt="Gyoza" loading="lazy"></picture>
-        </div>
-        <div class="menu-info">
-          <h3 class="menu-name lang-en">Halal Chicken Gyoza (5pcs)</h3>
-          <h3 class="menu-name lang-id" style="display:none;">Gyoza Ayam Halal (5pcs)</h3>
-          <h3 class="menu-name lang-ja" style="display:none;">ハラール鶏餃子 (5個)</h3>
-          <p class="menu-desc lang-en">Crispy bottom, juicy inside.</p>
-          <p class="menu-price">¥800</p>
-        </div>
-      </div>
-
-      <!-- Item 6: Karaage -->
-      <div class="menu-card">
-        <div class="img-wrap">
-          <picture><source srcset="Photoroom_20260627_202453.webp" type="image/webp"><img src="Photoroom_20260627_202453.png" alt="Fried Chicken" loading="lazy"></picture>
-        </div>
-        <div class="menu-info">
-          <h3 class="menu-name lang-en">Fried Chicken (5pcs)</h3>
-          <h3 class="menu-name lang-id" style="display:none;">Ayam Goreng (5pcs)</h3>
-          <h3 class="menu-name lang-ja" style="display:none;">鶏の唐揚げ (5個)</h3>
-          <p class="menu-desc lang-en">Perfect side dish for your ramen.</p>
-          <p class="menu-price">¥900</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Access -->
-  <section class="container">
-    <div class="access-box">
-      <h3 class="lang-en">Location & Hours</h3>
-      <h3 class="lang-id" style="display:none;">Lokasi & Jam Buka</h3>
-      <h3 class="lang-ja" style="display:none;">アクセス・営業時間</h3>
-      
-      <p><strong>B1F, Dia Palace Shinjuku 1-chome, 1-31-3 Shinjuku, Shinjuku-ku, Tokyo</strong></p>
-      <p>Lunch: 11:30 - 15:00 <br> Dinner: 17:00 - 21:00</p>
-      
-      <a href="https://maps.app.goo.gl/wJ13Yw6kF5H7m3uXA" target="_blank" rel="noopener" class="map-btn">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/></svg>
-        <span class="lang-en">Open in Google Maps</span>
-        <span class="lang-id" style="display:none;">Buka di Google Maps</span>
-        <span class="lang-ja" style="display:none;">Google Mapsで開く</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- Fixed Mobile CTA -->
-  <div class="fixed-cta">
-    <a href="https://www.instagram.com/honolu_shinjukugyoen" target="_blank" class="cta-btn">
-      <svg viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg>
-      Instagram
-    </a>
-    <a href="https://maps.app.goo.gl/wJ13Yw6kF5H7m3uXA" target="_blank" class="cta-btn main">
-      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/></svg>
-      Google Maps
-    </a>
-    <a href="tel:+81353577664" class="cta-btn">
-      <svg viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg>
-      Call Us
-    </a>
-  </div>
-
-  <script>
-    // JSのcurrentTarget依存を廃止し、引数のボタン要素を直接操作
-    function switchLang(lang, btnElement) {
-      // 全ての言語表示要素を非表示
-      document.querySelectorAll('.lang-en, .lang-id, .lang-ja').forEach(el => {
-        el.style.display = 'none';
-      });
-      // 選択された言語要素を表示
-      document.querySelectorAll('.lang-' + lang).forEach(el => {
-        el.style.display = '';
-      });
-      // ボタンのスタイル更新
-      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-      if(btnElement) btnElement.classList.add('active');
-    }
-  </script>
+            // 3. アラビア語 (RTL) 用のレイアウト対応とHTML全体のlang属性更新 (SEO最適化)
+            document.documentElement.lang = lang;
+            if (lang === 'ar') {
+                document.body.style.direction = 'rtl';
+                document.body.style.textAlign = 'right';
+            } else {
+                document.body.style.direction = 'ltr';
+                document.body.style.textAlign = 'left';
+            }
+        }
+    </script>
 </body>
 </html>
