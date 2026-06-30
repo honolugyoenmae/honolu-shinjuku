@@ -1,653 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Menya Honolu Shinjuku Gyoenmae</title>
-    <meta name="description" content="100% Halal certified authentic Japanese Ramen in Tokyo. Famous for spicy chicken ramen and A5 Wagyu.">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": "Menya Honolu Shinjuku Gyoenmae",
-      "servesCuisine": "Japanese, Halal, Ramen",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "1-5-4 Shinjuku, Yoneya Building 1F",
-        "addressLocality": "Shinjuku-ku",
-        "addressRegion": "Tokyo",
-        "postalCode": "160-0022",
-        "addressCountry": "JP"
-      }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menya Honolu Shinjuku Gyoenmae | 100% Halal Ramen in Tokyo</title>
+  <meta name="description" content="100% Halal certified authentic Japanese Ramen in Shinjuku, Tokyo. Famous for spicy chicken ramen, A5 Wagyu ramen. 1 min from Shinjuku-gyoenmae Station. Prayer room available.">
+  <meta property="og:title" content="Menya Honolu Shinjuku Gyoenmae | 100% Halal Ramen">
+  <meta property="og:description" content="100% Halal certified ramen in Tokyo. Prayer room available.">
+  <meta property="og:image" content="Photoroom_20260627_194821.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800;900&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Menya Honolu Shinjuku Gyoenmae",
+    "image": "Photoroom_20260627_194821.png",
+    "servesCuisine": ["Japanese", "Halal", "Ramen"],
+    "priceRange": "¥¥",
+    "telephone": "+81-3-5357-7664",
+    "address": { "@type": "PostalAddress", "streetAddress": "B1F, Dia Palace Shinjuku 1-chome, 1-31-3 Shinjuku", "addressLocality": "Shinjuku-ku", "addressRegion": "Tokyo", "postalCode": "160-0022", "addressCountry": "JP" },
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Halal Certified", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Prayer Room", "value": true }
+    ]
+  }
+  </script>
+
+  <style>
+    :root { --primary:#c92a2a; --dark:#1f1a18; --gray:#f5f3f0; --text:#4a423f; --border:#e6e0d8; }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    body { margin:0; padding:0 0 70px; font-family:'Plus Jakarta Sans','Noto Sans JP',sans-serif; color:var(--text); line-height:1.6; }
+    img { display:block; max-width:100%; height:auto; }
+    a { color:inherit; text-decoration:none; }
+    
+    /* Nav */
+    nav { position:sticky; top:0; z-index:100; background:rgba(255,255,255,.95); backdrop-filter:blur(10px); border-bottom:1px solid var(--border); padding:12px 18px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-size:1.1rem; font-weight:900; color:var(--dark); }
+    .logo span { color:var(--primary); }
+    .lang-switch { display:flex; gap:4px; background:var(--gray); padding:4px; border-radius:99px; }
+    .lang-btn { border:none; background:none; padding:6px 12px; font-size:.8rem; font-weight:800; border-radius:99px; cursor:pointer; color:var(--text); }
+    .lang-btn.active { background:#fff; color:var(--primary); box-shadow:0 2px 8px rgba(0,0,0,.08); }
+
+    /* Hero */
+    .hero { position:relative; overflow:hidden; color:#fff; text-align:center; padding:90px 18px; background:#1b1210; }
+    .hero-bg-grid { position:absolute; inset:0; display:grid; grid-template-columns:repeat(2, 1fr); grid-template-rows:repeat(2, 1fr); z-index:-3; opacity:0.6; }
+    .hero-bg-grid img { width:100%; height:100%; object-fit:cover; }
+    .hero::before { content:""; position:absolute; inset:0; z-index:-2; background:linear-gradient(135deg, rgba(60,8,8,.8), rgba(170,20,20,.6)); }
+    .hero-inner { position:relative; max-width:800px; margin:0 auto; animation:fadeUp .8s ease; }
+    @keyframes fadeUp { from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:none} }
+    .eyebrow { display:inline-block; margin-bottom:16px; padding:6px 16px; border:1px solid rgba(255,255,255,.4); border-radius:99px; font-size:.75rem; font-weight:800; letter-spacing:2px; background:rgba(0,0,0,.2); }
+    .hero h1 { margin:0 0 16px; font-size:clamp(2rem,6vw,3.2rem); font-weight:900; line-height:1.1; }
+    .hero p { margin:0 auto; max-width:600px; font-size:1.05rem; opacity:.9; }
+    .badge-container { display:flex; justify-content:center; gap:10px; margin-top:24px; flex-wrap:wrap; }
+    .badge { display:inline-flex; align-items:center; gap:6px; background:#fff; color:var(--primary); padding:8px 16px; border-radius:99px; font-weight:800; font-size:.85rem; box-shadow:0 4px 12px rgba(0,0,0,.15); }
+    .badge svg { width:16px; height:16px; fill:currentColor; }
+
+    /* Layout */
+    .container { max-width:1000px; margin:0 auto; padding:60px 18px; }
+    .sec-title { text-align:center; font-size:2rem; font-weight:900; color:var(--dark); margin-bottom:40px; }
+
+    /* Menu Grid */
+    .menu-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:24px; }
+    .menu-card { background:#fff; border:1px solid var(--border); border-radius:18px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,.04); transition:.3s; display:flex; flex-direction:column; }
+    .menu-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(0,0,0,.08); }
+    .img-wrap { position:relative; padding-top:75%; background:var(--gray); overflow:hidden; }
+    .img-wrap img { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; transition:.5s; }
+    .menu-card:hover .img-wrap img { transform:scale(1.05); }
+    .menu-tag { position:absolute; top:12px; left:12px; background:var(--primary); color:#fff; font-size:.7rem; font-weight:800; padding:4px 10px; border-radius:6px; letter-spacing:1px; z-index:2; }
+    .menu-info { padding:20px; flex-grow:1; display:flex; flex-direction:column; }
+    .menu-name { font-size:1.15rem; font-weight:800; color:var(--dark); margin:0 0 8px; line-height:1.3; }
+    .menu-desc { font-size:.85rem; color:#666; margin:0 0 16px; flex-grow:1; }
+    .menu-price { font-size:1.25rem; font-weight:900; color:var(--primary); margin:0; }
+
+    /* Access */
+    .access-box { background:var(--gray); border-radius:18px; padding:32px 24px; text-align:center; }
+    .access-box h3 { margin:0 0 16px; font-size:1.3rem; color:var(--dark); }
+    .access-box p { margin:0 0 12px; font-size:.95rem; }
+    .map-btn { display:inline-flex; align-items:center; gap:8px; background:var(--dark); color:#fff; padding:12px 24px; border-radius:99px; font-weight:700; margin-top:12px; transition:.2s; }
+    .map-btn:hover { background:var(--primary); }
+
+    /* Fixed CTA */
+    .fixed-cta { position:fixed; bottom:0; left:0; right:0; background:#fff; display:flex; box-shadow:0 -4px 20px rgba(0,0,0,.08); z-index:90; padding:10px 18px 18px; border-top:1px solid var(--border); }
+    .cta-btn { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; font-size:.7rem; font-weight:800; color:var(--text); padding:8px 0; }
+    .cta-btn svg { width:22px; height:22px; fill:var(--dark); }
+    .cta-btn.main { background:var(--primary); color:#fff; border-radius:12px; flex:1.5; margin:0 8px; }
+    .cta-btn.main svg { fill:#fff; }
+
+    @media (min-width: 768px) {
+      body { padding-bottom: 0; }
+      .fixed-cta { display: none; }
+      .hero { padding: 140px 18px; }
     }
-    </script>
-    <style>
-        :root {
-            --primary: #c92a2a;
-            --dark: #1f1a18;
-            --gray: #f5f3f0;
-            --text: #4a423f;
-            --border: #e6e0d8;
-        }
-
-        * {
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: var(--text);
-            background: #fff;
-            line-height: 1.6;
-        }
-
-        /* Nav */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            padding: 12px 18px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.15rem;
-            font-weight: 900;
-            color: var(--dark);
-            text-transform: uppercase;
-            letter-spacing: -0.02em;
-        }
-
-        .lang-switch {
-            display: flex;
-            gap: 6px;
-            background: var(--gray);
-            padding: 4px;
-            border-radius: 999px;
-        }
-
-        .lang-btn {
-            border: none;
-            background: transparent;
-            padding: 6px 12px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            border-radius: 999px;
-            color: var(--text);
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .lang-btn.active {
-            background: #fff;
-            color: var(--primary);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        }
-
-        /* Hero */
-        .hero {
-            position: relative;
-            overflow: hidden;
-            color: #fff;
-            text-align: center;
-            padding: clamp(56px, 9vw, 98px) 18px;
-            background: #1b1210;
-            isolation: isolate;
-        }
-
-        .hero-bg-grid {
-            position: absolute;
-            inset: 0;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            z-index: -3;
-        }
-
-        .hero-bg-photo {
-            min-height: 100%;
-            background-size: cover;
-            background-position: center;
-            filter: saturate(1.05) contrast(1.04);
-            transform: scale(1.02);
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: -2;
-            pointer-events: none;
-            background:
-                linear-gradient(135deg, rgba(60, 8, 8, 0.82), rgba(170, 20, 20, 0.68)),
-                radial-gradient(circle at 50% 10%, rgba(217, 164, 65, 0.25), transparent 35%);
-        }
-
-        .hero::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: -1;
-            pointer-events: none;
-            background:
-                linear-gradient(180deg, rgba(0,0,0,0.22), rgba(0,0,0,0.34)),
-                linear-gradient(90deg, rgba(0,0,0,0.18), transparent 18%, transparent 82%, rgba(0,0,0,0.18));
-        }
-
-        .hero-inner {
-            position: relative;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-
-        .hero .eyebrow {
-            display: inline-block;
-            margin-bottom: 18px;
-            padding: 7px 16px;
-            border: 1px solid rgba(255, 255, 255, 0.42);
-            border-radius: 999px;
-            font-size: 0.78rem;
-            font-weight: 800;
-            letter-spacing: 0.22em;
-            text-transform: uppercase;
-            background: rgba(0,0,0,0.18);
-            backdrop-filter: blur(6px);
-        }
-
-        .hero h2 {
-            margin: 0 0 14px;
-            font-size: clamp(2rem, 6vw, 3.45rem);
-            line-height: 1.12;
-            font-weight: 900;
-            text-shadow: 0 4px 18px rgba(0,0,0,0.38);
-        }
-
-        .hero p {
-            margin: 0 auto;
-            max-width: 760px;
-            font-size: clamp(1rem, 2.4vw, 1.17rem);
-            opacity: 0.98;
-            text-shadow: 0 3px 14px rgba(0,0,0,0.35);
-        }
-
-        .badge-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 24px;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: #fff;
-            color: var(--primary);
-            padding: 8px 15px;
-            border-radius: 999px;
-            font-size: 0.85rem;
-            font-weight: 900;
-            white-space: nowrap;
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
-        }
-
-        .quick-actions {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 11px;
-            margin-top: 28px;
-        }
-
-        .quick-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-            padding: 12px 22px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            color: #fff;
-            text-decoration: none;
-            font-weight: 850;
-            transition: 0.2s;
-            backdrop-filter: blur(7px);
-        }
-
-        .quick-btn:hover {
-            transform: translateY(-2px);
-            background: rgba(255, 255, 255, 0.26);
-        }
-
-        .quick-btn.solid {
-            background: #fff;
-            color: var(--primary);
-        }
-
-        /* Menu */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 18px 80px;
-        }
-
-        .tabs {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 30px;
-            overflow-x: auto;
-            padding-bottom: 8px;
-            scrollbar-width: none;
-        }
-
-        .tabs::-webkit-scrollbar { display: none; }
-
-        .tab {
-            padding: 12px 24px;
-            background: var(--gray);
-            border: none;
-            border-radius: 999px;
-            font-family: inherit;
-            font-weight: 800;
-            color: var(--dark);
-            white-space: nowrap;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .tab.active {
-            background: var(--dark);
-            color: #fff;
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 20px;
-        }
-
-        /* メニューカードのレイアウト安定化 */
-        .menu-card {
-            position: relative;
-            overflow: hidden;
-            background: #fff;
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            transition: 0.22s;
-            display: flex;
-            flex-direction: column;
-            min-height: 345px;
-        }
-
-        .menu-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-        }
-
-        .menu-img-wrap {
-            background: #faf7f3;
-            padding: 16px;
-            min-height: 217px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .menu-img-wrap img {
-            width: 100%;
-            height: auto;
-            max-height: 180px;
-            object-fit: contain;
-            transition: 0.3s;
-        }
-
-        .menu-card:hover .menu-img-wrap img {
-            transform: scale(1.05);
-        }
-
-        .no-img {
-            height: 217px;
-            display: grid;
-            place-items: center;
-            background: #faf7f3;
-            color: #b39a86;
-            font-size: 2rem;
-        }
-
-        .menu-info {
-            padding: 15px 14px 18px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex: 1;
-        }
-
-        .menu-title {
-            margin: 0 0 10px;
-            font-size: 1.04rem;
-            line-height: 1.45;
-            color: var(--dark);
-            font-weight: 800;
-            min-height: 2.9em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .menu-price {
-            font-size: 1.15rem;
-            font-weight: 900;
-            color: var(--primary);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: #fff;
-            text-align: center;
-            padding: 40px 18px;
-        }
-
-        footer h3 {
-            margin: 0 0 12px;
-            font-size: 1.2rem;
-        }
-
-        footer p {
-            margin: 0 0 8px;
-            color: rgba(255,255,255,0.7);
-        }
-
-        .footer-links {
-            margin-top: 24px;
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-        }
-
-        .footer-links a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            padding: 10px 24px;
-            border-radius: 999px;
-            background: rgba(255,255,255,0.1);
-        }
-
-        /* Responsive */
-        @media (max-width: 700px) {
-            .menu-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-            }
-            .menu-card {
-                min-height: 300px;
-            }
-            .menu-img-wrap {
-                min-height: 170px;
-                padding: 12px;
-            }
-            .menu-img-wrap img {
-                max-height: 140px;
-            }
-            .no-img {
-                height: 170px;
-            }
-            .menu-info {
-                padding: 12px 10px 14px;
-            }
-            .menu-title {
-                font-size: 0.95rem;
-                min-height: 3.8em;
-            }
-            .menu-price {
-                font-size: 1.05rem;
-            }
-        }
-    </style>
+  </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">Honolu</div>
-        <div class="lang-switch">
-            <button class="lang-btn active" onclick="setLang('en')">EN</button>
-            <button class="lang-btn" onclick="setLang('ja')">JA</button>
-            <button class="lang-btn" onclick="setLang('id')">ID</button>
-        </div>
-    </nav>
-
-    <section class="hero">
-        <div class="hero-bg-grid" aria-hidden="true">
-            <div class="hero-bg-photo" style="background-image: url('IMG_9205.jpeg');"></div>
-            <div class="hero-bg-photo" style="background-image: url('IMG_9612.png');"></div>
-            <div class="hero-bg-photo" style="background-image: url('Photoroom_20260627_194821.png');"></div>
-            <div class="hero-bg-photo" style="background-image: url('Photoroom_20260628_174934.png');"></div>
-        </div>
-
-        <div class="hero-inner">
-            <span class="eyebrow" data-i18n="hero_eyebrow">Authentic Japanese</span>
-            <h2 data-i18n="hero_title">Halal Ramen<br>in Tokyo</h2>
-            <p data-i18n="hero_desc">Rich chicken broth ramen and A5 Wagyu beef. Enjoy a completely Halal dining experience in Shinjuku.</p>
-            
-            <div class="badge-container">
-                <div class="badge">🕌 <span data-i18n="badge_halal">100% BERSERTIFIKAT HALAL</span></div>
-                <div class="badge">🍜 <span data-i18n="badge_ramen">Best Spicy Ramen</span></div>
-            </div>
-
-            <div class="quick-actions">
-                <a href="#menu" class="quick-btn solid" data-i18n="btn_menu">View Menu</a>
-                <a href="https://maps.app.goo.gl/9R6KxR3oT9qV4oRy6" target="_blank" class="quick-btn">📍 <span data-i18n="btn_map">Google Maps</span></a>
-            </div>
-        </div>
-    </section>
-
-    <div class="container" id="menu">
-        <div class="tabs" id="tabContainer">
-            <button class="tab active" onclick="filterMenu('all')">All Menu</button>
-            <button class="tab" onclick="filterMenu('ramen')">Ramen</button>
-            <button class="tab" onclick="filterMenu('side')">Side</button>
-            <button class="tab" onclick="filterMenu('rice')">Rice</button>
-            <button class="tab" onclick="filterMenu('drinks')">Drinks & Sweets</button>
-        </div>
-
-        <div class="menu-grid" id="menuContainer">
-            <!-- JSで自動生成 -->
-        </div>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Honolu <span>Ramen</span></div>
+    <div class="lang-switch">
+      <button class="lang-btn active" onclick="switchLang('en', this)">EN</button>
+      <button class="lang-btn" onclick="switchLang('id', this)">ID</button>
+      <button class="lang-btn" onclick="switchLang('ja', this)">JA</button>
     </div>
+  </nav>
 
-    <footer>
-        <h3>Menya Honolu Shinjuku Gyoenmae</h3>
-        <p>1F Yoneya Bldg, 1-5-4 Shinjuku, Shinjuku-ku, Tokyo</p>
-        <div class="footer-links">
-            <a href="https://maps.app.goo.gl/9R6KxR3oT9qV4oRy6" target="_blank">Google Maps</a>
-            <a href="https://www.instagram.com/menyahonolu/" target="_blank">Instagram</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg-grid">
+      <!-- WebP対応構造（pictureタグ） -->
+      <picture><source srcset="IMG_9205.webp" type="image/webp"><img src="IMG_9205.jpeg" alt="Staff"></picture>
+      <picture><source srcset="Photoroom_20260627_194821.webp" type="image/webp"><img src="Photoroom_20260627_194821.png" alt="Ramen"></picture>
+      <picture><source srcset="IMG_9612.webp" type="image/webp"><img src="IMG_9612.png" alt="Customers"></picture>
+      <picture><source srcset="Photoroom_20260627_194200.webp" type="image/webp"><img src="Photoroom_20260627_194200.png" alt="Ramen"></picture>
+    </div>
+    <div class="hero-inner">
+      <span class="eyebrow lang-en">Welcome to Tokyo</span>
+      <span class="eyebrow lang-id" style="display:none;">Selamat Datang di Tokyo</span>
+      <span class="eyebrow lang-ja" style="display:none;">東京へようこそ</span>
+      
+      <h1 class="lang-en">Authentic Halal Ramen in Shinjuku</h1>
+      <h1 class="lang-id" style="display:none;">Ramen Halal Otentik di Shinjuku</h1>
+      <h1 class="lang-ja" style="display:none;">新宿で味わう本格ハラールラーメン</h1>
+      
+      <p class="lang-en">Experience the rich taste of Japan with 0% compromise. Prayer room available inside.</p>
+      <p class="lang-id" style="display:none;">Nikmati cita rasa khas Jepang tanpa kompromi. Tersedia ruang sholat.</p>
+      <p class="lang-ja" style="display:none;">妥協なしの本格ラーメン。礼拝室も完備しております。</p>
+      
+      <div class="badge-container">
+        <div class="badge">
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <span class="lang-en">100% BERSERTIFIKAT HALAL</span>
+          <span class="lang-id" style="display:none;">100% BERSERTIFIKAT HALAL</span>
+          <span class="lang-ja" style="display:none;">100% ハラール認証済</span>
         </div>
-    </footer>
+        <div class="badge">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/></svg>
+          <span class="lang-en">1 min from Station</span>
+          <span class="lang-id" style="display:none;">1 menit dari Stasiun</span>
+          <span class="lang-ja" style="display:none;">駅から徒歩1分</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script>
-    // 多言語テキスト辞書
-    const translations = {
-        en: {
-            hero_eyebrow: "Authentic Japanese",
-            hero_title: "Halal Ramen<br>in Tokyo",
-            hero_desc: "Rich chicken broth ramen and A5 Wagyu beef. Enjoy a completely Halal dining experience in Shinjuku.",
-            badge_halal: "100% BERSERTIFIKAT HALAL",
-            badge_ramen: "Best Spicy Ramen",
-            btn_menu: "View Menu",
-            btn_map: "Google Maps",
-            tab_all: "All Menu",
-            tab_ramen: "Ramen",
-            tab_side: "Side",
-            tab_rice: "Rice",
-            tab_drinks: "Drinks & Sweets"
-        },
-        ja: {
-            hero_eyebrow: "本場の味",
-            hero_title: "東京で味わう<br>ハラールラーメン",
-            hero_desc: "濃厚鶏白湯ラーメンとA5和牛。新宿御苑前で完全ハラールのお食事をお楽しみください。",
-            badge_halal: "100% BERSERTIFIKAT HALAL",
-            badge_ramen: "人気の辛旨ラーメン",
-            btn_menu: "メニューを見る",
-            btn_map: "Google Maps",
-            tab_all: "すべて",
-            tab_ramen: "ラーメン",
-            tab_side: "サイド",
-            tab_rice: "ご飯もの",
-            tab_drinks: "ドリンク・デザート"
-        },
-        id: {
-            hero_eyebrow: "Autentik Jepang",
-            hero_title: "Ramen Halal<br>di Tokyo",
-            hero_desc: "Ramen kaldu ayam yang kaya dan daging Wagyu A5. Nikmati pengalaman bersantap Halal sepenuhnya di Shinjuku.",
-            badge_halal: "100% BERSERTIFIKAT HALAL",
-            badge_ramen: "Ramen Pedas Terbaik",
-            btn_menu: "Lihat Menu",
-            btn_map: "Google Maps",
-            tab_all: "Semua Menu",
-            tab_ramen: "Ramen",
-            tab_side: "Sampingan",
-            tab_rice: "Nasi",
-            tab_drinks: "Minuman & Penutup"
-        }
-    };
+  <!-- Menu Section -->
+  <section class="container" id="menu">
+    <h2 class="sec-title lang-en">Our Menu</h2>
+    <h2 class="sec-title lang-id" style="display:none;">Menu Kami</h2>
+    <h2 class="sec-title lang-ja" style="display:none;">メニュー</h2>
 
-    // メニューデータ
-    const menuItems = [
-        // Ramen
-        { cat:"ramen", img:"Photoroom_20260627_194821.png", ramen:true, name:{en:"Spicy Fried Chicken Ramen", ja:"スパイシーから揚げらーめん", id:"Ramen Ayam Goreng Pedas"}, price:"¥1,700" },
-        { cat:"ramen", img:"Photoroom_20260627_195530.png", ramen:true, name:{en:"Special Rich Chicken Ramen", ja:"特製濃厚鶏白湯らーめん", id:"Ramen Kaldu Ayam Kaya Spesial"}, price:"¥1,600" },
-        { cat:"ramen", img:"Photoroom_20260216_164803.jpeg", ramen:true, name:{en:"Fried Chicken Ramen", ja:"から揚げらーめん", id:"Ramen Ayam Goreng"}, price:"¥1,600" },
-        { cat:"ramen", img:"Photoroom_20260216_165039.jpeg", ramen:true, name:{en:"Special Spicy Chicken Ramen", ja:"特製辛鶏白湯らーめん", id:"Ramen Ayam Pedas Spesial"}, price:"¥1,700" },
-        { cat:"ramen", img:"Photoroom_20260216_165249.jpeg", ramen:true, name:{en:"Spicy Chicken Ramen", ja:"辛鶏白湯らーめん", id:"Ramen Ayam Pedas"}, price:"¥1,300" },
-        { cat:"ramen", img:"Photoroom_20260216_165431.jpeg", ramen:true, name:{en:"Spicy Yakiniku BBQ Ramen", ja:"辛牛焼肉らーめん", id:"Ramen BBQ Yakiniku Pedas"}, price:"¥2,100" },
-        { cat:"ramen", img:"Photoroom_20260216_165604.jpeg", ramen:true, name:{en:"Yakiniku BBQ Ramen", ja:"牛焼肉らーめん", id:"Ramen BBQ Yakiniku"}, price:"¥2,000" },
-        { cat:"ramen", img:"Photoroom_20260216_165842.jpeg", ramen:true, name:{en:"Rich Chicken Soy Sauce Ramen", ja:"濃厚鶏白湯醤油らーめん", id:"Ramen Kecap Ayam Kaya"}, price:"¥1,200" },
-        { cat:"ramen", img:"Photoroom_20260216_170114.jpeg", ramen:true, name:{en:"Special Chicken Soy Sauce Ramen", ja:"特製鶏白湯醤油らーめん", id:"Ramen Kecap Ayam Spesial"}, price:"¥1,600" },
-        { cat:"ramen", img:"Photoroom_20260216_170327.jpeg", ramen:true, name:{en:"Rich Chicken Ramen", ja:"濃厚鶏白湯らーめん", id:"Ramen Kaldu Ayam Kaya"}, price:"¥1,200" },
-        { cat:"ramen", img:"Photoroom_20260216_170656.jpeg", ramen:true, name:{en:"A5 Wagyu Beef Ramen", ja:"A5和牛らーめん", id:"Ramen Daging Sapi Wagyu A5"}, price:"¥3,800" },
-        { cat:"ramen", img:"Photoroom_20260216_170943.jpeg", ramen:true, name:{en:"Kids Ramen", ja:"お子様らーめん", id:"Ramen Anak"}, price:"¥1,000" },
-        { cat:"ramen", img:"Photoroom_20260216_171120.jpeg", ramen:true, name:{en:"Mazemen (Soupless)", ja:"まぜそば", id:"Mazemen (Tanpa Kuah)"}, price:"¥1,200" },
-        { cat:"ramen", img:"Photoroom_20260221_115629.jpeg", ramen:true, name:{en:"Spicy Mazemen (Soupless)", ja:"辛まぜそば", id:"Mazemen Pedas (Tanpa Kuah)"}, price:"¥1,300" },
+    <div class="menu-grid">
+      <!-- Item 1 -->
+      <div class="menu-card">
+        <div class="img-wrap">
+          <span class="menu-tag">NO.1 POPULAR</span>
+          <picture><source srcset="Photoroom_20260627_194821.webp" type="image/webp"><img src="Photoroom_20260627_194821.png" alt="Spicy Ramen" loading="lazy"></picture>
+        </div>
+        <div class="menu-info">
+          <h3 class="menu-name lang-en">Spicy Fried Chicken Ramen</h3>
+          <h3 class="menu-name lang-id" style="display:none;">Ramen Ayam Goreng Pedas</h3>
+          <h3 class="menu-name lang-ja" style="display:none;">スパイシー唐揚げラーメン</h3>
+          <p class="menu-desc lang-en">Rich chicken broth topped with crispy halal fried chicken and special spicy sauce.</p>
+          <p class="menu-desc lang-id" style="display:none;">Kaldu ayam kaya rasa dengan topping ayam goreng halal renyah & saus pedas spesial.</p>
+          <p class="menu-desc lang-ja" style="display:none;">濃厚鶏白湯にサクサクのハラール唐揚げと特製旨辛ダレをトッピング。</p>
+          <p class="menu-price">¥2,200</p>
+        </div>
+      </div>
 
-        // Side
-        { cat:"side", img:"Photoroom_20260506_130818.jpeg", name:{en:"Tartar Chicken", ja:"タルタルチキン", id:"Ayam Saus Tartar"}, price:"¥950" },
-        { cat:"side", img:"Photoroom_20260628_174904.png", name:{en:"Fried Chicken 5 pieces", ja:"から揚げ 5個", id:"Ayam Goreng 5 pcs"}, price:"¥850" },
-        { cat:"side", img:"48329aa0-4110-4d0d-88b0-8a03a82218e5.jpeg", name:{en:"Spicy Fried Chicken 5 pieces", ja:"スパイシーから揚げ 5個", id:"Ayam Goreng Pedas 5 pcs"}, price:"¥1,050" },
-        { cat:"side", img:"Photoroom_20260628_174934.png", name:{en:"Chicken Gyoza Grilled 5 pieces", ja:"焼き餃子 5個", id:"Gyoza Ayam Panggang 5 pcs"}, price:"¥800" },
-        { cat:"side", img:"Photoroom_20260507_115644.jpeg", name:{en:"Chicken Gyoza Fried 5 pieces", ja:"揚げ餃子 5個", id:"Gyoza Ayam Goreng 5 pcs"}, price:"¥800" },
-        { cat:"side", img:"Photoroom_20260507_120855.jpeg", name:{en:"Chicken Gyoza Boiled 5 pieces", ja:"水餃子 5個", id:"Gyoza Ayam Rebus 5 pcs"}, price:"¥800" },
-        { cat:"side", img:"Photoroom_20260117_200403.jpeg", name:{en:"French Fries", ja:"フレンチフライ", id:"Kentang Goreng"}, price:"¥350" },
-        { cat:"side", emoji:"🥣", name:{en:"Miso Soup", ja:"味噌汁", id:"Sup Miso"}, price:"¥100" },
+      <!-- Item 2 -->
+      <div class="menu-card">
+        <div class="img-wrap">
+          <span class="menu-tag" style="background: #d9a441;">PREMIUM</span>
+          <picture><source srcset="Photoroom_20260627_195537.webp" type="image/webp"><img src="Photoroom_20260627_195537.png" alt="Wagyu Ramen" loading="lazy"></picture>
+        </div>
+        <div class="menu-info">
+          <h3 class="menu-name lang-en">A5 Wagyu Soy-Sauce Ramen</h3>
+          <h3 class="menu-name lang-id" style="display:none;">Ramen Shoyu Wagyu A5</h3>
+          <h3 class="menu-name lang-ja" style="display:none;">A5和牛醤油ラーメン</h3>
+          <p class="menu-desc lang-en">Luxurious clear broth topped with melting A5 Halal Wagyu slices.</p>
+          <p class="menu-desc lang-id" style="display:none;">Kaldu jernih mewah dengan irisan Daging Wagyu Halal A5 yang lumer di mulut.</p>
+          <p class="menu-desc lang-ja" style="display:none;">とろけるA5ハラール和牛を贅沢に乗せた至高のあっさり醤油ラーメン。</p>
+          <p class="menu-price">¥4,500</p>
+        </div>
+      </div>
 
-        // Rice
-        { cat:"rice", img:"Photoroom_20260628_174808.png", name:{en:"Fried Chicken Rice Bowl", ja:"から揚げ丼", id:"Nasi Ayam Goreng"}, price:"¥1,300" },
-        { cat:"rice", img:"Photoroom_20260221_141234.jpeg", name:{en:"Fried Chicken Rice Bowl Small", ja:"から揚げ丼 小", id:"Nasi Ayam Goreng Kecil"}, price:"¥800" },
-        { cat:"rice", img:"Photoroom_20260221_141329.jpeg", name:{en:"Beef Rice Bowl", ja:"牛丼", id:"Nasi Daging Sapi"}, price:"¥1,400" },
-        { cat:"rice", img:"Photoroom_20260221_141304.jpeg", name:{en:"Beef Rice Bowl Small", ja:"牛丼 小", id:"Nasi Daging Sapi Kecil"}, price:"¥900" },
-        { cat:"rice", img:"Photoroom_20260221_115705.jpeg", name:{en:"A5 Wagyu Rice Small", ja:"ミニA5和牛重", id:"Nasi Wagyu A5 Kecil"}, price:"¥2,300" },
-        { cat:"rice", img:"Photoroom_20260221_141859.jpeg", name:{en:"Rice", ja:"ご飯", id:"Nasi Putih"}, price:"¥300" },
-        { cat:"rice", img:"Photoroom_20260221_143537.jpeg", name:{en:"Fried Chicken Curry Rice", ja:"から揚げカレー", id:"Nasi Kari Ayam Goreng"}, price:"¥1,500" },
-        { cat:"rice", img:"Photoroom_20260628_174831.png", name:{en:"Beef Yakiniku Curry Rice", ja:"牛焼肉カレー", id:"Nasi Kari Daging Sapi Yakiniku"}, price:"¥1,600" },
+      <!-- Item 3: Curry (Image Updated) -->
+      <div class="menu-card">
+        <div class="img-wrap">
+          <picture><source srcset="Photoroom_20260221_143537.webp" type="image/webp"><img src="Photoroom_20260221_143537.jpeg" alt="Karaage Curry" loading="lazy"></picture>
+        </div>
+        <div class="menu-info">
+          <h3 class="menu-name lang-en">Karaage Curry</h3>
+          <h3 class="menu-name lang-id" style="display:none;">Kari Ayam Goreng</h3>
+          <h3 class="menu-name lang-ja" style="display:none;">唐揚げカレー</h3>
+          <p class="menu-desc lang-en">Japanese style rich curry served with our signature juicy fried chicken.</p>
+          <p class="menu-desc lang-id" style="display:none;">Kari kental gaya Jepang disajikan dengan ayam goreng juicy khas kami.</p>
+          <p class="menu-desc lang-ja" style="display:none;">じっくり煮込んだ和風カレーに自慢のジューシー唐揚げをトッピング。</p>
+          <p class="menu-price">¥1,600</p>
+        </div>
+      </div>
 
-        // Drinks & Sweets
-        { cat:"drinks", img:"IMG_8576.jpeg", name:{en:"Japanese Soda (Ramune)", ja:"ラムネ", id:"Soda Jepang (Ramune)"}, price:"¥350" },
-        { cat:"drinks", emoji:"☕", name:{en:"Oolong Tea", ja:"烏龍茶", id:"Teh Oolong"}, price:"¥250" },
-        { cat:"drinks", emoji:"🥤", name:{en:"Cola", ja:"コーラ", id:"Cola"}, price:"¥250" },
-        { cat:"drinks", emoji:"🧃", name:{en:"Orange Juice", ja:"オレンジジュース", id:"Jus Jeruk"}, price:"¥250" },
-        { cat:"drinks", emoji:"🍨", name:{en:"Vanilla Ice Cream", ja:"バニラアイス", id:"Es Krim Vanila"}, price:"¥250" },
-        { cat:"drinks", emoji:"🍵", name:{en:"Matcha Ice Cream", ja:"抹茶アイス", id:"Es Krim Matcha"}, price:"¥250" }
-    ];
+      <!-- Item 4: Kids Ramen (New) -->
+      <div class="menu-card">
+        <div class="img-wrap">
+          <picture><source srcset="Photoroom_20260627_194200.webp" type="image/webp"><img src="Photoroom_20260627_194200.png" alt="Kids Ramen" loading="lazy"></picture>
+        </div>
+        <div class="menu-info">
+          <h3 class="menu-name lang-en">Kids Ramen</h3>
+          <h3 class="menu-name lang-id" style="display:none;">Ramen Anak-anak</h3>
+          <h3 class="menu-name lang-ja" style="display:none;">お子様らーめん</h3>
+          <p class="menu-desc lang-en">Mild and friendly portion for kids.</p>
+          <p class="menu-desc lang-id" style="display:none;">Porsi yang ramah dan lembut untuk anak-anak.</p>
+          <p class="menu-desc lang-ja" style="display:none;">お子様向けの優しい味わいと食べやすいサイズのラーメン。</p>
+          <p class="menu-price">¥1,000</p>
+        </div>
+      </div>
 
-    let currentLang = 'en';
-    let currentCategory = 'all';
+      <!-- Item 5: Gyoza -->
+      <div class="menu-card">
+        <div class="img-wrap">
+          <picture><source srcset="Photoroom_20260627_202306.webp" type="image/webp"><img src="Photoroom_20260627_202306.png" alt="Gyoza" loading="lazy"></picture>
+        </div>
+        <div class="menu-info">
+          <h3 class="menu-name lang-en">Halal Chicken Gyoza (5pcs)</h3>
+          <h3 class="menu-name lang-id" style="display:none;">Gyoza Ayam Halal (5pcs)</h3>
+          <h3 class="menu-name lang-ja" style="display:none;">ハラール鶏餃子 (5個)</h3>
+          <p class="menu-desc lang-en">Crispy bottom, juicy inside.</p>
+          <p class="menu-price">¥800</p>
+        </div>
+      </div>
 
-    // 言語切り替え
-    function setLang(lang) {
-        currentLang = lang;
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
-        });
+      <!-- Item 6: Karaage -->
+      <div class="menu-card">
+        <div class="img-wrap">
+          <picture><source srcset="Photoroom_20260627_202453.webp" type="image/webp"><img src="Photoroom_20260627_202453.png" alt="Fried Chicken" loading="lazy"></picture>
+        </div>
+        <div class="menu-info">
+          <h3 class="menu-name lang-en">Fried Chicken (5pcs)</h3>
+          <h3 class="menu-name lang-id" style="display:none;">Ayam Goreng (5pcs)</h3>
+          <h3 class="menu-name lang-ja" style="display:none;">鶏の唐揚げ (5個)</h3>
+          <p class="menu-desc lang-en">Perfect side dish for your ramen.</p>
+          <p class="menu-price">¥900</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // テキスト置換
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            if (translations[lang][key]) {
-                el.innerHTML = translations[lang][key];
-            }
-        });
+  <!-- Access -->
+  <section class="container">
+    <div class="access-box">
+      <h3 class="lang-en">Location & Hours</h3>
+      <h3 class="lang-id" style="display:none;">Lokasi & Jam Buka</h3>
+      <h3 class="lang-ja" style="display:none;">アクセス・営業時間</h3>
+      
+      <p><strong>B1F, Dia Palace Shinjuku 1-chome, 1-31-3 Shinjuku, Shinjuku-ku, Tokyo</strong></p>
+      <p>Lunch: 11:30 - 15:00 <br> Dinner: 17:00 - 21:00</p>
+      
+      <a href="https://maps.app.goo.gl/wJ13Yw6kF5H7m3uXA" target="_blank" rel="noopener" class="map-btn">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/></svg>
+        <span class="lang-en">Open in Google Maps</span>
+        <span class="lang-id" style="display:none;">Buka di Google Maps</span>
+        <span class="lang-ja" style="display:none;">Google Mapsで開く</span>
+      </a>
+    </div>
+  </section>
 
-        // タブ名更新
-        const tabs = document.querySelectorAll('.tab');
-        tabs[0].textContent = translations[lang].tab_all;
-        tabs[1].textContent = translations[lang].tab_ramen;
-        tabs[2].textContent = translations[lang].tab_side;
-        tabs[3].textContent = translations[lang].tab_rice;
-        tabs[4].textContent = translations[lang].tab_drinks;
+  <!-- Fixed Mobile CTA -->
+  <div class="fixed-cta">
+    <a href="https://www.instagram.com/honolu_shinjukugyoen" target="_blank" class="cta-btn">
+      <svg viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg>
+      Instagram
+    </a>
+    <a href="https://maps.app.goo.gl/wJ13Yw6kF5H7m3uXA" target="_blank" class="cta-btn main">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/></svg>
+      Google Maps
+    </a>
+    <a href="tel:+81353577664" class="cta-btn">
+      <svg viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg>
+      Call Us
+    </a>
+  </div>
 
-        renderMenu();
+  <script>
+    // JSのcurrentTarget依存を廃止し、引数のボタン要素を直接操作
+    function switchLang(lang, btnElement) {
+      // 全ての言語表示要素を非表示
+      document.querySelectorAll('.lang-en, .lang-id, .lang-ja').forEach(el => {
+        el.style.display = 'none';
+      });
+      // 選択された言語要素を表示
+      document.querySelectorAll('.lang-' + lang).forEach(el => {
+        el.style.display = '';
+      });
+      // ボタンのスタイル更新
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if(btnElement) btnElement.classList.add('active');
     }
-
-    // メニュー絞り込み
-    window.filterMenu = function(category) {
-        currentCategory = category;
-        const tabs = document.querySelectorAll('.tab');
-        tabs.forEach(tab => tab.classList.remove('active'));
-        
-        // event.currentTarget依存を廃止し、引数に基づいてアクティブタブを設定
-        const catArray = ['all', 'ramen', 'side', 'rice', 'drinks'];
-        const activeIndex = catArray.indexOf(category);
-        if(activeIndex !== -1) {
-            tabs[activeIndex].classList.add('active');
-        }
-
-        renderMenu();
-    }
-
-    // メニュー描画
-    function renderMenu() {
-        const container = document.getElementById('menuContainer');
-        container.innerHTML = '';
-
-        const filtered = menuItems.filter(item => currentCategory === 'all' || item.cat === currentCategory);
-
-        filtered.forEach(item => {
-            const title = item.name[currentLang] || item.name.en;
-            
-            let imgHTML = '';
-            if (item.img) {
-                imgHTML = `<img src="${item.img}" alt="${item.name.en}" loading="lazy">`;
-            } else {
-                imgHTML = `<div class="no-img">${item.emoji || '🍽'}</div>`;
-            }
-
-            const card = document.createElement('div');
-            card.className = 'menu-card';
-            card.innerHTML = `
-                <div class="menu-img-wrap">${imgHTML}</div>
-                <div class="menu-info">
-                    <h3 class="menu-title">${title}</h3>
-                    <div class="menu-price">${item.price}</div>
-                </div>
-            `;
-            container.appendChild(card);
-        });
-    }
-
-    // 初期化
-    document.addEventListener('DOMContentLoaded', () => {
-        setLang('en');
-    });
-    </script>
+  </script>
 </body>
 </html>
