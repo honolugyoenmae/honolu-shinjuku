@@ -856,6 +856,65 @@ img {
     padding: 7px 12px;
   }
 }
+ /* ===== Final image alignment fix ===== */
+.menu-img-wrap {
+  background: #faf7f3;
+  min-height: 218px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.menu-img-wrap img {
+  width: 100%;
+  max-width: 210px;
+  height: 185px;
+  object-fit: contain !important;
+  object-position: center center;
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+}
+
+.menu-card.ramen .menu-img-wrap img {
+  width: 205px;
+  height: 205px;
+  object-fit: contain !important;
+  object-position: center center;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 6px;
+  border: 4px solid #f3ece5;
+}
+
+.hero-bg-grid img {
+  object-position: center center;
+}
+
+.gallery-img {
+  object-position: center center;
+}
+
+@media (max-width: 700px) {
+  .menu-img-wrap {
+    min-height: 170px;
+    padding: 12px;
+  }
+
+  .menu-img-wrap img {
+    height: 138px;
+    object-fit: contain !important;
+  }
+
+  .menu-card.ramen .menu-img-wrap img {
+    width: 145px;
+    height: 145px;
+    object-fit: contain !important;
+  }
+} 
 </style>
 </head>
 
