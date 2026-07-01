@@ -548,7 +548,7 @@ img {
   border-color: var(--primary);
   box-shadow: 0 6px 14px rgba(170,20,20,.24);
 }
- /* Menu cards */
+  /* Menu cards */
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1064,8 +1064,8 @@ img {
     <span class="icon">📱</span>
     Instagram
   </a>
-</div> 
-  <script>
+</div>
+<script>
 const translations = {
   en: {
     hero_eyebrow:"100% Halal Certified",
@@ -1195,7 +1195,8 @@ const categories = [
   {id:"dessert", label:{en:"Dessert", ja:"デザート", id:"Dessert"}},
   {id:"souvenir", label:{en:"Souvenir", ja:"お土産", id:"Oleh-oleh"}}
 ];
- const menuItems = [
+
+  const menuItems = [
   {cat:"ramen", img:"Photoroom_20260627_194821.png", ramen:true, badge:"Popular", name:{en:"Spicy Fried Chicken Ramen 🌶️🌶️", ja:"スパイシー唐揚げらーめん 🌶️🌶️", id:"Ramen Ayam Goreng Pedas 🌶️🌶️"}, price:"¥2,200"},
   {cat:"ramen", img:"Photoroom_20260627_213230.png", ramen:true, name:{en:"Spicy Beef Yakiniku Ramen 🌶️🌶️", ja:"スパイシー牛焼肉らーめん 🌶️🌶️", id:"Ramen Sapi Yakiniku Pedas 🌶️🌶️"}, price:"¥2,300"},
   {cat:"ramen", img:"Photoroom_20260627_213305.png", ramen:true, name:{en:"Spicy Ramen 🌶️🌶️", ja:"スパイシーらーめん 🌶️🌶️", id:"Ramen Pedas 🌶️🌶️"}, price:"¥1,800"},
@@ -1232,7 +1233,8 @@ const categories = [
   
   {cat:"souvenir", img:"Photoroom_20260627_214317.png", name:{en:"Halal Ramen Souvenir Box", ja:"ハラールラーメンお土産箱", id:"Kotak Oleh-oleh Ramen Halal"}, price:"¥1,200"}
 ];
-let currentLang = 'en';
+
+ let currentLang = 'en';
 
 function setLang(lang) {
   currentLang = lang;
@@ -1311,4 +1313,4 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 </body>
-</html>    
+</html> 
