@@ -1,728 +1,299 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menya Honolu Shinjuku Gyoenmae | 100% Halal Ramen</title>
-  <meta name="description" content="新宿御苑前の100%ハラール認証ラーメン店。礼拝室・ウドゥ設備あり。鶏白湯ラーメン、混ぜそば、餃子など。電話・地図・営業時間はこちら。" />
-  <meta name="format-detection" content="telephone=no">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<title>Menya Honolu Shinjuku Gyoenmae | 100% Halal Ramen in Tokyo</title>
+<meta name="description" content="Menya Honolu Shinjuku Gyoenmae is a 100% Halal certified ramen restaurant in Tokyo. Prayer room available. 1-minute walk from Shinjuku-gyoenmae Station.">
+<meta name="keywords" content="Halal Ramen Tokyo, Shinjuku Halal Ramen, Menya Honolu, Muslim friendly restaurant Tokyo, ハラールラーメン, 新宿 ハラール">
 
-  <style>
-    :root {
-      --primary: #d62828;
-      --primary-dark: #b91c1c;
-      --accent: #f59e0b;
-      --dark: #111827;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --bg: #ffffff;
-      --section: #f9fafb;
-      --border: #e5e7eb;
-      --shadow: 0 10px 30px rgba(0,0,0,.08);
-      --radius: 18px;
-      --max: 1100px;
-    }
+<!-- Open Graph / Social Media -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Menya Honolu Shinjuku Gyoenmae | 100% Halal Ramen">
+<meta property="og:description" content="Authentic 100% Halal ramen in Tokyo. Prayer room available. 1-minute walk from Shinjuku-gyoenmae Station.">
+<meta property="og:image" content="Photoroom_20260627_194821.png">
+<meta property="og:locale" content="en_US">
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.7;
-      padding-bottom: 76px;
-    }
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
 
-    a { color: inherit; }
-    img { max-width: 100%; display: block; }
+<!-- JSON-LD Structured Data: No Holiday, NNB Certified -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Menya Honolu Shinjuku Gyoenmae",
+  "alternateName": "麺屋 帆のる 新宿御苑前",
+  "image": "Photoroom_20260627_194821.png",
+  "servesCuisine": ["Halal Ramen", "Japanese"],
+  "priceRange": "¥¥",
+  "telephone": "+81-3-5357-7664",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "B1F, Dia Palace Shinjuku 1-chome, 1-31-3 Shinjuku",
+    "addressLocality": "Shinjuku-ku",
+    "addressRegion": "Tokyo",
+    "postalCode": "160-0022",
+    "addressCountry": "JP"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "11:30",
+      "closes": "15:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "17:00",
+      "closes": "21:00"
+    }
+  ],
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Halal Certified by NNB",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Prayer Room",
+      "value": true
+    }
+  ]
+}
+</script>
 
-    .container {
-      width: min(var(--max), calc(100% - 32px));
-      margin: 0 auto;
-    }
+<style>
+:root {
+  --primary: #aa1414;
+  --dark: #171313;
+  --text: #302b27;
+  --bg: #f7f1eb;
+  --card: #ffffff;
+  --radius: 16px;
+}
 
-    .section {
-      padding: 64px 0;
-    }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background-color: var(--bg);
+  padding-bottom: 80px; /* Space for Fixed CTA */
+}
 
-    .section.alt {
-      background: var(--section);
-    }
+/* Header */
+.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  background: rgba(23,19,19,0.95);
+  color: #fff; padding: 12px 20px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.logo-area strong { font-size: 1.1rem; display: block; }
+.logo-area span { font-size: 0.75rem; opacity: 0.7; }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 12px;
-      background: #fff7ed;
-      color: #9a3412;
-      border: 1px solid #fed7aa;
-      border-radius: 999px;
-      font-size: .85rem;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
+/* Hero Section */
+.hero {
+  position: relative; padding: 80px 20px; text-align: center;
+  color: #fff; background: #000; min-height: 70vh;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0; opacity: 0.5;
+  background: url('IMG_9205.jpeg') center/cover no-repeat;
+}
+.hero-content { position: relative; z-index: 1; max-width: 800px; }
+.hero h1 { font-size: clamp(2rem, 8vw, 3.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 15px; }
+.hero p { font-size: 1.1rem; margin-bottom: 25px; opacity: 0.9; }
 
-    h1, h2, h3, p { margin-top: 0; }
-    h1 {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      line-height: 1.15;
-      margin-bottom: 16px;
-      letter-spacing: .01em;
-    }
-    h2 {
-      font-size: clamp(1.5rem, 3vw, 2.2rem);
-      line-height: 1.25;
-      margin-bottom: 18px;
-    }
-    .section-title {
-      margin-bottom: 22px;
-    }
-    .muted { color: var(--muted); }
+/* NNB Certification Badge - Hero Direct */
+.nnb-cert {
+  background: #fff; color: #000; padding: 12px 20px;
+  border-radius: 50px; display: inline-flex; align-items: center;
+  gap: 10px; font-weight: 800; margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.nnb-cert span { color: var(--primary); }
 
-    /* Hero */
-    .hero {
-      position: relative;
-      min-height: 88vh;
-      display: flex;
-      align-items: center;
-      color: #fff;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.55)),
-        url("Photoroom_20260627_194821.png") center/cover no-repeat;
-    }
+/* Sections */
+.section { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
+.section-title { text-align: center; margin-bottom: 40px; }
+.section-title h2 { font-size: 2rem; color: var(--primary); margin-bottom: 10px; }
 
-    .hero-inner {
-      width: min(var(--max), calc(100% - 32px));
-      margin: 0 auto;
-      padding: 96px 0 72px;
-    }
+/* Menu Categories */
+.menu-cat-title { 
+  background: var(--primary); color: #fff; 
+  padding: 10px 20px; border-radius: 8px; 
+  margin: 30px 0 20px; font-size: 1.2rem;
+}
+.menu-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+.menu-card {
+  background: var(--card); border-radius: var(--radius);
+  overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.menu-card img { width: 100%; height: 200px; object-fit: cover; }
+.menu-info { padding: 15px; }
+.menu-info h4 { margin-bottom: 5px; font-size: 1.1rem; }
+.menu-price { font-weight: 800; color: var(--primary); font-size: 1.2rem; }
 
-    .hero-card {
-      max-width: 760px;
-      background: rgba(17,24,39,.58);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 24px;
-      padding: 26px;
-      box-shadow: var(--shadow);
-    }
+/* Access Card */
+.access-box {
+  background: #fff; padding: 30px; border-radius: var(--radius);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 30px;
+}
+@media (max-width: 768px) { .access-box { grid-template-columns: 1fr; } }
 
-    .hero h1 strong {
-      color: #fff1c7;
-    }
+/* Fixed Footer CTA for Store Visit */
+.fixed-cta {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: #fff; padding: 12px 20px;
+  box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px; z-index: 1000;
+}
+.cta-btn {
+  text-align: center; padding: 12px; border-radius: 10px;
+  font-weight: 800; text-decoration: none; font-size: 0.9rem;
+}
+.cta-maps { background: var(--primary); color: #fff; }
+.cta-tel { background: #eee; color: #000; }
 
-    .hero-lead {
-      font-size: 1.05rem;
-      color: rgba(255,255,255,.92);
-      margin-bottom: 18px;
-    }
-
-    .status-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 18px 0 22px;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 12px;
-      border-radius: 999px;
-      font-size: .88rem;
-      font-weight: 700;
-      line-height: 1;
-    }
-    .badge.light { background: rgba(255,255,255,.14); color: #fff; }
-    .badge.halal { background: #ecfdf5; color: #065f46; }
-    .badge.open { background: #e6f4ea; color: #1e8e3e; }
-    .badge.closed { background: #fce5e5; color: #d33b27; }
-
-    .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 22px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 14px 18px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 800;
-      border: 1px solid transparent;
-      transition: .2s ease;
-      min-height: 48px;
-    }
-    .btn.primary {
-      background: var(--primary);
-      color: #fff;
-      box-shadow: 0 10px 20px rgba(214,40,40,.18);
-    }
-    .btn.primary:hover { background: var(--primary-dark); }
-    .btn.secondary {
-      background: rgba(255,255,255,.12);
-      color: #fff;
-      border-color: rgba(255,255,255,.22);
-    }
-    .btn.secondary:hover { background: rgba(255,255,255,.18); }
-    .btn.dark {
-      background: #111827;
-      color: #fff;
-    }
-
-    .hero-meta {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 22px;
-    }
-    .meta-box {
-      background: rgba(255,255,255,.12);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 16px;
-      padding: 14px;
-    }
-    .meta-label {
-      font-size: .8rem;
-      opacity: .8;
-      margin-bottom: 6px;
-    }
-    .meta-value {
-      font-weight: 800;
-      font-size: .98rem;
-    }
-
-    /* Grid sections */
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .card-body { padding: 22px; }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .feature {
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
-      background: #fff;
-    }
-    .feature h3 { margin-bottom: 8px; font-size: 1.02rem; }
-
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .menu-item {
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: var(--shadow);
-    }
-
-    .menu-item img {
-      width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      background: #eee;
-    }
-
-    .menu-content {
-      padding: 16px;
-    }
-
-    .menu-tag {
-      display: inline-block;
-      margin-bottom: 8px;
-      padding: 5px 10px;
-      background: #fff7ed;
-      color: #9a3412;
-      border-radius: 999px;
-      font-size: .8rem;
-      font-weight: 800;
-    }
-
-    .menu-price {
-      font-weight: 900;
-      color: var(--primary);
-      font-size: 1.02rem;
-      margin-top: 8px;
-    }
-
-    .info-list {
-      display: grid;
-      gap: 14px;
-    }
-
-    .info-row {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .info-row:last-child { border-bottom: none; }
-
-    .info-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
-      background: #fef2f2;
-      color: var(--primary);
-      display: grid;
-      place-items: center;
-      flex: 0 0 40px;
-      font-size: 1.1rem;
-      font-weight: 900;
-    }
-
-    .hours-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-    .hours-table th, .hours-table td {
-      padding: 14px 16px;
-      border-bottom: 1px solid var(--border);
-      text-align: left;
-    }
-    .hours-table th {
-      width: 30%;
-      background: #f9fafb;
-    }
-    .hours-table tr:last-child th,
-    .hours-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
-    .gallery-grid img {
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    footer {
-      background: var(--dark);
-      color: #fff;
-      padding: 34px 0 88px;
-      margin-top: 0;
-    }
-    footer p { margin: 6px 0; }
-
-    /* fixed CTA */
-    .fixed-cta {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      background: #fff;
-      border-top: 1px solid var(--border);
-      z-index: 999;
-      box-shadow: 0 -8px 24px rgba(0,0,0,.08);
-      padding-bottom: env(safe-area-inset-bottom);
-    }
-
-    .fixed-cta a {
-      text-decoration: none;
-      padding: 10px 8px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-      font-weight: 800;
-      border-right: 1px solid var(--border);
-      color: var(--text);
-      min-height: 64px;
-      justify-content: center;
-    }
-    .fixed-cta a:last-child { border-right: none; }
-    .fixed-cta .call {
-      background: var(--primary);
-      color: #fff;
-    }
-
-    @media (max-width: 900px) {
-      .grid-2,
-      .features,
-      .menu-grid,
-      .gallery-grid,
-      .hero-meta {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        min-height: auto;
-      }
-      .hero-inner {
-        padding: 72px 0 56px;
-      }
-    }
-
-    @media (min-width: 901px) {
-      .fixed-cta { display: none; }
-      body { padding-bottom: 0; }
-    }
-  </style>
+</style>
 </head>
 <body>
 
-  <header class="hero">
-    <div class="hero-inner">
-      <div class="hero-card">
-        <div class="eyebrow">🕌 100% Halal Certified Ramen in Shinjuku Gyoen</div>
-        <h1><strong>Menya Honolu</strong><br>Shinjuku Gyoenmae</h1>
-        <p class="hero-lead">
-          ハラール認証取得。礼拝室・ウドゥ設備あり。<br>
-          鶏白湯ラーメンを中心に、安心して食べられる本格ラーメン店です。
-        </p>
-
-        <div class="status-row">
-          <span class="badge halal">✅ Halal Certified by NAHA Japan</span>
-          <span id="openStatus" class="badge open">🟢 Open Now</span>
-        </div>
-
-        <div class="hero-cta">
-          <a class="btn primary" href="tel:0353577664">📞 Call 03-5357-7664</a>
-          <a class="btn secondary" href="#access">📍 Get Directions</a>
-          <a class="btn secondary" href="#menu">🍜 View Menu</a>
-        </div>
-
-        <div class="hero-meta">
-          <div class="meta-box">
-            <div class="meta-label">Address</div>
-            <div class="meta-value">新宿1-31-3 B1F</div>
-          </div>
-          <div class="meta-box">
-            <div class="meta-label">Hours</div>
-            <div class="meta-value">11:30–15:00 / 17:00–21:00</div>
-          </div>
-          <div class="meta-box">
-            <div class="meta-label">Closed</div>
-            <div class="meta-value">Tuesday</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="section">
-      <div class="container grid-2">
-        <div class="card">
-          <div class="card-body">
-            <div class="eyebrow">Why Choose Us</div>
-            <h2 class="section-title">来店を後押しする強み</h2>
-            <div class="features">
-              <div class="feature">
-                <h3>100% Halal</h3>
-                <p class="muted">No pork, no lard, no alcohol.</p>
-              </div>
-              <div class="feature">
-                <h3>Prayer Room</h3>
-                <p class="muted">Muslim guests can pray comfortably.</p>
-              </div>
-              <div class="feature">
-                <h3>Wudu Space</h3>
-                <p class="muted">Ablution space is available.</p>
-              </div>
-              <div class="feature">
-                <h3>Easy Access</h3>
-                <p class="muted">Near Shinjuku Gyoenmae Station.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" id="access">
-          <div class="card-body">
-            <div class="eyebrow">Access</div>
-            <h2 class="section-title">店舗情報</h2>
-            <div class="info-list">
-              <div class="info-row">
-                <div class="info-icon">📍</div>
-                <div>
-                  <strong>Address</strong><br>
-                  東京都新宿区新宿1-31-3 ダイアパレス新宿1丁目 B1F
-                </div>
-              </div>
-              <div class="info-row">
-                <div class="info-icon">☎</div>
-                <div>
-                  <strong>Phone</strong><br>
-                  <a href="tel:0353577664">03-5357-7664</a>
-                </div>
-              </div>
-              <div class="info-row">
-                <div class="info-icon">🕒</div>
-                <div>
-                  <strong>Opening Hours</strong><br>
-                  Lunch 11:30–15:00 / Dinner 17:00–21:00<br>
-                  Closed: Tuesday
-                </div>
-              </div>
-              <div class="info-row">
-                <div class="info-icon">🕌</div>
-                <div>
-                  <strong>Facilities</strong><br>
-                  Prayer room, wudu space, halal certification
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" id="menu">
-      <div class="container">
-        <div class="eyebrow">Recommended</div>
-        <h2 class="section-title">メニュー</h2>
-        <div class="menu-grid">
-          <article class="menu-item">
-            <img src="IMG_4169.jpeg" alt="ハラール ラーメン">
-            <div class="menu-content">
-              <span class="menu-tag">Recommended</span>
-              <h3>Halal Ramen</h3>
-              <p class="muted">濃厚な鶏白湯スープの看板メニュー。</p>
-              <div class="menu-price">¥1,000〜</div>
-            </div>
-          </article>
-
-          <article class="menu-item">
-            <img src="IMG_4170.jpeg" alt="ラーメンの写真">
-            <div class="menu-content">
-              <span class="menu-tag">Popular</span>
-              <h3>Chicken Based Ramen</h3>
-              <p class="muted">やさしい旨みとコクを両立した一杯。</p>
-              <div class="menu-price">¥1,000〜</div>
-            </div>
-          </article>
-
-          <article class="menu-item">
-            <img src="IMG_4171.jpeg" alt="店内の写真">
-            <div class="menu-content">
-              <span class="menu-tag">Side Menu</span>
-              <h3>Gyoza / Side Dishes</h3>
-              <p class="muted">ラーメンと一緒に楽しめる人気サイド。</p>
-              <div class="menu-price">¥300〜</div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid-2">
-        <div class="card">
-          <div class="card-body">
-            <div class="eyebrow">Gallery</div>
-            <h2 class="section-title">店内の様子</h2>
-            <div class="gallery-grid">
-              <img src="IMG_4169.jpeg" alt="Prayer Room">
-              <img src="IMG_4170.jpeg" alt="Restaurant Entrance">
-              <img src="IMG_4171.jpeg" alt="Interior">
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-body">
-            <div class="eyebrow">FAQ</div>
-            <h2 class="section-title">よくある質問</h2>
-            <div class="info-list">
-              <div class="info-row">
-                <div class="info-icon">Q</div>
-                <div>
-                  <strong>予約は必要ですか？</strong><br>
-                  予約なしでご来店いただけます。電話での確認も可能です。
-                </div>
-              </div>
-              <div class="info-row">
-                <div class="info-icon">Q</div>
-                <div>
-                  <strong>ハラール対応ですか？</strong><br>
-                  はい、100%ハラール認証店です。
-                </div>
-              </div>
-              <div class="info-row">
-                <div class="info-icon">Q</div>
-                <div>
-                  <strong>礼拝室はありますか？</strong><br>
-                  はい、礼拝室とウドゥ設備があります。
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="container">
-        <div class="eyebrow">Hours</div>
-        <h2 class="section-title">営業時間</h2>
-        <table class="hours-table" aria-label="営業時間">
-          <tr>
-            <th>Monday</th><td>11:30–15:00 / 17:00–21:00</td>
-          </tr>
-          <tr>
-            <th>Tuesday</th><td>Closed</td>
-          </tr>
-          <tr>
-            <th>Wednesday</th><td>11:30–15:00 / 17:00–21:00</td>
-          </tr>
-          <tr>
-            <th>Thursday</th><td>11:30–15:00 / 17:00–21:00</td>
-          </tr>
-          <tr>
-            <th>Friday</th><td>11:30–15:00 / 17:00–21:00</td>
-          </tr>
-          <tr>
-            <th>Saturday</th><td>11:30–15:00 / 17:00–21:00</td>
-          </tr>
-          <tr>
-            <th>Sunday</th><td>11:30–15:00 / 17:00–21:00</td>
-          </tr>
-        </table>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container card">
-        <div class="card-body" style="text-align:center;">
-          <div class="eyebrow">Contact</div>
-          <h2 class="section-title">まずはお電話ください</h2>
-          <p class="muted">空席確認や道順確認は電話が最短です。</p>
-          <a class="btn primary" href="tel:0353577664" style="margin-top: 10px;">📞 03-5357-7664</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container" style="text-align:center;">
-      <p><strong>Menya Honolu Shinjuku Gyoenmae</strong></p>
-      <p>100% Halal Certified Ramen Restaurant</p>
-      <p>東京都新宿区新宿1-31-3 ダイアパレス新宿1丁目 B1F</p>
-    </div>
-  </footer>
-
-  <div class="fixed-cta">
-    <a class="call" href="tel:0353577664">📞<span>Call</span></a>
-    <a href="#access">📍<span>Map</span></a>
-    <a href="#menu">🍜<span>Menu</span></a>
+<header class="site-header">
+  <div class="logo-area">
+    <strong>MENYA HONOLU</strong>
+    <span>Shinjuku Gyoenmae</span>
   </div>
+  <div class="lang">English / JP</div>
+</header>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Menya Honolu Shinjuku Gyoenmae",
-    "description": "100% halal certified ramen restaurant in Shinjuku Gyoenmae with prayer room and wudu space.",
-    "telephone": "+81-3-5357-7664",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "B1F, Dia Palace Shinjuku 1-chome, 1-31-3 Shinjuku",
-      "addressLocality": "Shinjuku-ku",
-      "addressRegion": "Tokyo",
-      "postalCode": "160-0022",
-      "addressCountry": "JP"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "11:30",
-        "closes": "15:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "17:00",
-        "closes": "21:00"
-      }
-    ],
-    "servesCuisine": ["Halal", "Japanese", "Ramen"],
-    "priceRange": "¥¥"
-  }
-  </script>
+<main>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="nnb-cert">
+        100% HALAL CERTIFIED BY <span>NNB</span>
+      </div>
+      <h1>Taste the Best Halal Ramen in Tokyo</h1>
+      <p>Authentic Chicken Broth Ramen. Dedicated Prayer Room & Wudu space available. 1-minute walk from station.</p>
+      <div style="display: flex; gap: 10px; justify-content: center;">
+        <span style="background:rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px;">Open Daily</span>
+        <span style="background:rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px;">Prayer Room</span>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    function updateOpenStatus() {
-      const el = document.getElementById('openStatus');
-      if (!el) return;
+  <section class="section" id="menu">
+    <div class="section-title">
+      <h2>Our Menu</h2>
+      <p>All ingredients are 100% Halal certified.</p>
+    </div>
 
-      const now = new Date();
-      const day = now.getDay();
-      const h = now.getHours();
-      const m = now.getMinutes();
-      const t = h * 60 + m;
+    <h3 class="menu-cat-title">Ramen</h3>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="IMG_9205.jpeg" alt="Spicy Ramen">
+        <div class="menu-info">
+          <h4>Spicy Fried Chicken Ramen</h4>
+          <span class="menu-price">¥2,200</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="IMG_9612.png" alt="Wagyu Ramen">
+        <div class="menu-info">
+          <h4>A5 Wagyu Soy-Sauce Ramen</h4>
+          <span class="menu-price">¥4,500</span>
+        </div>
+      </div>
+    </div>
 
-      const lunchStart = 11 * 60 + 30;
-      const lunchEnd = 15 * 60;
-      const dinnerStart = 17 * 60;
-      const dinnerEnd = 21 * 60;
+    <h3 class="menu-cat-title">Side Menu</h3>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="Photoroom_20260627_194821.png" alt="Gyoza">
+        <div class="menu-info">
+          <h4>Halal Gyoza</h4>
+          <span class="menu-price">¥680</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="Photoroom_20260628_174934.png" alt="Karaage">
+        <div class="menu-info">
+          <h4>Chicken Karaage</h4>
+          <span class="menu-price">¥780</span>
+        </div>
+      </div>
+    </div>
 
-      let isOpen = false;
-      if (day !== 2) {
-        isOpen = (t >= lunchStart && t < lunchEnd) || (t >= dinnerStart && t < dinnerEnd);
-      }
+    <h3 class="menu-cat-title">Rice & Curry</h3>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="IMG_4169.jpeg" alt="Curry Rice">
+        <div class="menu-info">
+          <h4>Chicken Curry Rice</h4>
+          <span class="menu-price">¥1,180</span>
+        </div>
+      </div>
+    </div>
 
-      if (isOpen) {
-        el.textContent = '🟢 Open Now';
-        el.classList.remove('closed');
-        el.classList.add('open');
-      } else {
-        el.textContent = '🔴 Closed';
-        el.classList.remove('open');
-        el.classList.add('closed');
-      }
-    }
+    <h3 class="menu-cat-title">Dessert & Drinks</h3>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="Photoroom_20260627_215434.png" alt="Dessert">
+        <div class="menu-info">
+          <h4>Homemade Dessert</h4>
+          <span class="menu-price">¥480</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="IMG_4171.jpeg" alt="Drinks">
+        <div class="menu-info">
+          <h4>Soft Drinks</h4>
+          <span class="menu-price">¥350~</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    updateOpenStatus();
-    setInterval(updateOpenStatus, 60000);
-  </script>
+  <section class="section" style="background: #fff;">
+    <div class="section-title">
+      <h2>Shop Information</h2>
+    </div>
+    <div class="access-box">
+      <div>
+        <h4>Address</h4>
+        <p>B1F, Dia Palace Shinjuku 1-chome,<br>1-31-3 Shinjuku, Shinjuku-ku, Tokyo</p>
+        <p style="margin-top: 10px; font-weight: bold; color: var(--primary);">1 min walk from Shinjuku-gyoenmae Station</p>
+      </div>
+      <div>
+        <h4>Opening Hours</h4>
+        <p><strong>Open Daily (No Holidays)</strong></p>
+        <p>Lunch: 11:30 - 15:00</p>
+        <p>Dinner: 17:00 - 21:00</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="text-align: center; padding: 40px 20px; font-size: 0.8rem; opacity: 0.6;">
+  &copy; 2026 Menya Honolu Shinjuku Gyoenmae. 100% Halal Ramen Tokyo.
+</footer>
+
+<div class="fixed-cta">
+  <a href="https://www.google.com/maps/dir/?api=1&destination=35.6888,139.7111" class="cta-btn cta-maps">GET DIRECTIONS</a>
+  <a href="tel:0353577664" class="cta-btn cta-tel">CALL SHOP</a>
+</div>
+
 </body>
 </html>
